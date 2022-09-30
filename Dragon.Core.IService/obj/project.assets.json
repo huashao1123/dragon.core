@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Dragon.Core.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dragon.Core.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dragon.Core.Entity.dll": {}
+        }
+      },
+      "Dragon.Core.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dragon.Core.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dragon.Core.ViewModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dragon.Core.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Dragon.Core.Entity/Dragon.Core.Entity.csproj",
+      "msbuildProject": "../Dragon.Core.Entity/Dragon.Core.Entity.csproj"
+    },
+    "Dragon.Core.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../Dragon.Core.ViewModel/Dragon.Core.ViewModel.csproj",
+      "msbuildProject": "../Dragon.Core.ViewModel/Dragon.Core.ViewModel.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Dragon.Core.Entity >= 1.0.0",
+      "Dragon.Core.ViewModel >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "E:\\nugetClient\\.nuget\\packages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.IService\\Dragon.Core.IService.csproj",
+      "projectName": "Dragon.Core.IService",
+      "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.IService\\Dragon.Core.IService.csproj",
+      "packagesPath": "E:\\nugetClient\\.nuget\\packages",
+      "outputPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.IService\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\longhaihua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "http://192.168.100.64:8008/nuget": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Entity\\Dragon.Core.Entity.csproj": {
+              "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Entity\\Dragon.Core.Entity.csproj"
+            },
+            "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.ViewModel\\Dragon.Core.ViewModel.csproj": {
+              "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.ViewModel\\Dragon.Core.ViewModel.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://192.168.100.64:8008/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

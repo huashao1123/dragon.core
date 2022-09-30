@@ -1,0 +1,12 @@
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\bin\Debug\net6.0\Dragon.Core.Common.deps.json
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\bin\Debug\net6.0\Dragon.Core.Common.dll
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\bin\Debug\net6.0\Dragon.Core.Common.pdb
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.csproj.AssemblyReference.cache
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.AssemblyInfoInputs.cache
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.AssemblyInfo.cs
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.csproj.CoreCompileInputs.cache
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.dll
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\refint\Dragon.Core.Common.dll
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\Dragon.Core.Common.pdb
+C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.Common\obj\Debug\net6.0\ref\Dragon.Core.Common.dll

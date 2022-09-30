@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "9J6bciX2N0KHANSQqIsmdHgzgXTTcdUv6z+P/b1cHjI9QgQfIdYcaqGg7NnM/fUlDxF9jj6iu6OS0iOCLjEuDw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Entity\\Dragon.Core.Entity.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://192.168.100.64:8008/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

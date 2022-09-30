@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dragon.Core.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Dragon.Core.WebApi.TransactionalAttribute">
+            <summary>
+            事务特性
+            </summary>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ApiModuleController.GetApiList(System.String,System.Int32)">
+            <summary>
+            获取api列表
+            </summary>
+            <param name="name"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ApiModuleController.AddApiMouleAsync(Dragon.Core.ViewModel.ApiModuleViewModel)">
+            <summary>
+            增加api接口模块
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ApiModuleController.UpdateApiMouleAsync(Dragon.Core.ViewModel.ApiModuleViewModel)">
+            <summary>
+            更新api接口模块
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ApiModuleController.DeleteApiMouleAsync(System.Int32)">
+            <summary>
+            删除api接口模块，最好软删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.AuthController.Login(Dragon.Core.ViewModel.LoginInput)">
+            <summary>
+            登录接口
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode">
+            <summary>
+            获取按钮权限(登录)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.MenuListAsync(Dragon.Core.ViewModel.MenuParams)">
+            <summary>
+            菜单列表
+            </summary>
+            <param name="menuParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.AddMenuAsync(Dragon.Core.ViewModel.MenuInput)">
+            <summary>
+            添加菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.UpdateMenuAsync(Dragon.Core.ViewModel.MenuInput)">
+            <summary>
+            更新菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.DeleteMenuAsync(System.Int32)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Filter.AutofacPropertityModuleReg.Load(Autofac.ContainerBuilder)">
+            <summary>
+            允许控制器属性注入
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Dragon.Core.WebApi.Filter.GlobalRouteAuthorizeConvention">
+            <summary>
+            Summary:全局路由权限公约
+            Remarks:目的是针对不同的路由，采用不同的授权过滤器
+            如果 controller 上不加 [Authorize] 特性，默认都是 Permission 策略
+            否则，如果想特例其他授权机制的话，需要在 controller 上带上  [Authorize]，然后再action上自定义授权即可，比如 [Authorize(Roles = "Admin")]
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.WebApi.Filter.GlobalExceptionsFilter">
+            <summary>
+            全局异常错误日志
+            </summary>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Filter.GlobalExceptionsFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dragon.Core.WebApi.Filter.GlobalRoutePrefixFilter">
+            <summary>
+            全局路由前缀公约
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.WebApi.Filter.TransactionScopeFilter">
+            <summary>
+            事务过滤器
+            </summary>
+        </member>
+    </members>
+</doc>

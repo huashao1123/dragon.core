@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dragon.Core.Entity</name>
+    </assembly>
+    <members>
+        <member name="T:Dragon.Core.Entity.ApiModule">
+            <summary>
+            api接口模块
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.ApiModule.ApiName">
+            <summary>
+            API接口名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.ApiModule.ApiUrl">
+            <summary>
+            api接口地址
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.BaseEntity`1">
+            <summary>
+            基类
+            </summary>
+            <typeparam name="TPrimaryKey"></typeparam>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity`1.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity`1.CreatedId">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity`1.UpdateId">
+            <summary>
+            修改人ID
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.BaseEntity">
+            <summary>
+            基类
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.CreatedTime">
+            <summary>
+            创建时间//   类型后面加问号代表可以为空
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.CreatedName">
+            <summary>
+            创建人姓名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.UpdateName">
+            <summary>
+            修改人姓名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.IsDrop">
+            <summary>
+            删除标记,软删除
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.BaseEntity.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.DataScopeEnum">
+            <summary>
+            角色数据范围枚举
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.DataScopeEnum.All">
+            <summary>
+            全部数据
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.DataScopeEnum.Dept_with_child">
+            <summary>
+            本部门及以下数据
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.DataScopeEnum.Dept">
+            <summary>
+            本部门数据
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.DataScopeEnum.Self">
+            <summary>
+            仅本人数据
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.DataScopeEnum.Define">
+            <summary>
+            自定义数据
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.MenuTypeEnum">
+            <summary>
+            系统菜单类型枚举
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.MenuTypeEnum.Dir">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.MenuTypeEnum.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.MenuTypeEnum.Btn">
+            <summary>
+            按钮
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Normal">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Frozen">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysDepartMent.Name">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysDepartMent.Code">
+            <summary>
+            部门编码
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysDepartMent.Pid">
+             <summary>
+             部门负责人
+             </summary>
+            public string? Leader { get; set; }
+             <summary>
+             上级部门(0表示没有上级部门)
+             </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.SysMenu">
+            <summary>
+            菜单权限表
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Name">
+            <summary>
+             菜单名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.MenuType">
+            <summary>
+            菜单类型（1目录 2菜单 3按钮）
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.path">
+            <summary>
+            菜单路径
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Component">
+            <summary>
+            路由组件
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Permission">
+            <summary>
+            权限标识（权限码）
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Redirect">
+            <summary>
+            重定向
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.FrameSrc">
+            <summary>
+            内嵌地址
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Title">
+            <summary>
+            路由title  一般必填
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Icon">
+            <summary>
+             图标，也是菜单图标
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.IgnoreKeepAlive">
+            <summary>
+            是否忽略KeepAlive缓存
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.HideMenu">
+            <summary>
+            当前路由不再菜单显示
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.CurrentActiveMenu">
+            <summary>
+            当前激活的菜单。用于配置详情页时左侧激活的菜单路径
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.ParId">
+            <summary>
+            上级菜单Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysMenu.Mid">
+            <summary>
+            api地址接口
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRole.Name">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRole.Code">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRole.DataScope">
+            <summary>
+            数据范围（1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.SysRoleMenuModule">
+            <summary>
+            角色菜单接口权限关系对应表
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRoleMenuModule.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRoleMenuModule.MenuId">
+            <summary>
+            菜单权限Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRoleMenuModule.Mid">
+            <summary>
+            api接口Id,后台接口鉴权用
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.SysUser">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Sex">
+            <summary>
+            性别true=男。false=女
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.WeChat">
+            <summary>
+            微信号
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Account">
+            <summary>
+            工号=登陆账号
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.HistroyPsw">
+            <summary>
+            历史密码
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.ErrorCount">
+             <summary>
+            错误次数 
+             </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.LastErrTime">
+             <summary>
+            最后登录时间 
+             </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.DepartmentId">
+            <summary>
+            部门Id{用户所属部门}
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.EmpliyeeType">
+            <summary>
+            员工类型
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.JobName">
+            <summary>
+            职务名称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.Avater">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.SysUserDepartMent">
+            <summary>
+            用户部门关系对应表
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUserDepartMent.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUserDepartMent.DepartMentId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.SysUserRole">
+            <summary>
+            用户角色关系对应表
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUserRole.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUserRole.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+    </members>
+</doc>

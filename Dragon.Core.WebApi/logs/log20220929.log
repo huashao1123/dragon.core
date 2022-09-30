@@ -1,0 +1,77 @@
+2022-09-29 17:34:13.141 +08:00 [INF] Entity Framework Core 6.0.9 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-09-29 17:34:13.322 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-09-29 17:34:13.657 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-09-29 17:34:13.670 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-09-29 17:34:13.675 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-09-29 17:34:13.681 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-09-29 17:34:14.148 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?' (Size = 26), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 9), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?' (Size = 19), @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 4), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.186 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?' (Size = 26), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 6), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?' (Size = 17), @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 4), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.192 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 25), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 8), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?', @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 3), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.196 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 26), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 9), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?', @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 3), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.201 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 23), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 13), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?', @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 4), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.207 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 18), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 10), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?', @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 4), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.212 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 24), @p1='?' (DbType = Int32), @p2='?' (Size = 4), @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Boolean), @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (Size = 16), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?', @p16='?', @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 4), @p20='?' (DbType = Int32), @p21='?', @p22='?' (DbType = DateTime), @p23='?' (Size = 12)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SysMenu" ("Component", "CreatedId", "CreatedName", "CreatedTime", "CurrentActiveMenu", "FrameSrc", "HideMenu", "Icon", "IgnoreKeepAlive", "IsDrop", "MenuType", "Mid", "Name", "Order", "ParId", "Permission", "Redirect", "Remark", "Status", "Title", "UpdateId", "UpdateName", "UpdateTime", "path")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23);
+SELECT "Id"
+FROM "SysMenu"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-09-29 17:34:14.284 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-29 17:34:14.542 +08:00 [INF] Now listening on: http://[::]:5135
+2022-09-29 17:34:14.546 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-29 17:34:14.547 +08:00 [INF] Hosting environment: Development
+2022-09-29 17:34:14.548 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\Dragon.Core.WebApi\
+2022-09-29 17:34:16.252 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-09-29 17:34:16.873 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_vs/browserLink - -
+2022-09-29 17:34:16.876 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 627.0528ms
+2022-09-29 17:34:16.943 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-09-29 17:34:16.956 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 82.4604ms
+2022-09-29 17:34:16.957 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 13.1187ms
+2022-09-29 17:34:17.010 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-09-29 17:34:17.042 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/favicon-32x32.png - -
+2022-09-29 17:34:17.057 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-09-29 17:34:17.059 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/favicon-32x32.png - - - 200 628 image/png 17.1694ms
+2022-09-29 17:34:17.207 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 196.6601ms
