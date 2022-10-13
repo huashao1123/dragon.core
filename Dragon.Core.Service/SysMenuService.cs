@@ -28,6 +28,8 @@ namespace Dragon.Core.Service
         public async Task<bool> AddMenuAsync(MenuInput menuInput)
         {
             var sysMenu=_mapper.Map<SysMenu>(menuInput);
+            sysMenu.Name ??= "";
+            sysMenu.path ??= "";
             await InsertAsync(sysMenu);
             return true;
         }

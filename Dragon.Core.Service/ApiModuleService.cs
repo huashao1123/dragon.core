@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dragon.Core.Common;
 using Dragon.Core.Entity;
 using Dragon.Core.Entity.Enum;
 using Dragon.Core.IRepository;
@@ -16,9 +17,11 @@ namespace Dragon.Core.Service
     public class ApiModuleService : BaseService<ApiModule>, IApiModuleService
     {
         readonly IMapper _mapper;
-        public ApiModuleService(IBaseRepository<ApiModule> baseRepository,IMapper mapper) : base(baseRepository)
+        readonly IUser _user;
+        public ApiModuleService(IBaseRepository<ApiModule> baseRepository,IMapper mapper,IUser user) : base(baseRepository)
         {
             _mapper = mapper;
+            _user = user;
         }
 
         public async Task<bool> AddApiModuleAsync(ApiModuleViewModel model)
@@ -58,12 +61,12 @@ namespace Dragon.Core.Service
         public async Task<bool> UpdateApiModuleAsync(ApiModuleViewModel model)
         {
             ApiModule apiModule = _mapper.Map<ApiModule>(model);
-            var result = await UpdateAsync(apiModule);
-            if (result != null)
-            {
-                return true;
-            }
-            return false;
+
+            Expression<Func<ApiModule, object>> expression = b => b.CreatedName;
+            var result=await UpdateNotQueryAsync(apiModule,isIgnoreCol:true, properties: expression);
+
+           
+            return result>0;
         }
     }
 }

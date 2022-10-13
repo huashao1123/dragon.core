@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9zANsA7YDwlZPHvwXcJa9m6mUoUwlcTI3AnELwAIc1Q=",
+  "Hash": "9vU0OvWR9KuvuDI0Ym1NKHWl8hruKGMMZre+7V0gCi4=",
   "Source": "Dragon.Core.WebApi",
   "BasePath": "_content/Dragon.Core.WebApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Dragon.Core.WebApi\\wwwroot",
       "Source": "Dragon.Core.WebApi",
-      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\",
       "BasePath": "_content/Dragon.Core.WebApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\Data\\roleInfo.tsv",
+      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Data\\roleInfo.tsv",
       "SourceId": "Dragon.Core.WebApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\",
       "BasePath": "_content/Dragon.Core.WebApi",
       "RelativePath": "Data/roleInfo.tsv",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Data\\roleInfo.tsv"
     },
     {
-      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\Data\\sysmenu.tsv",
+      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Data\\sysmenu.tsv",
       "SourceId": "Dragon.Core.WebApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\",
       "BasePath": "_content/Dragon.Core.WebApi",
       "RelativePath": "Data/sysmenu.tsv",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Data\\sysmenu.tsv"
     },
     {
-      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\Data\\userInfo.tsv",
+      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Data\\userInfo.tsv",
       "SourceId": "Dragon.Core.WebApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\",
       "BasePath": "_content/Dragon.Core.WebApi",
       "RelativePath": "Data/userInfo.tsv",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Data\\userInfo.tsv"
     },
     {
-      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\Data\\userrole.tsv",
+      "Identity": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Data\\userrole.tsv",
       "SourceId": "Dragon.Core.WebApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\Dragon.Core.WebApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\",
       "BasePath": "_content/Dragon.Core.WebApi",
       "RelativePath": "Data/userrole.tsv",
       "AssetKind": "All",

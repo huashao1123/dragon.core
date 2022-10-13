@@ -91,5 +91,10 @@ namespace Dragon.Core.Service
         {
             await _baseRepository.UpdateManyAsync(entities, autoSave, cancellationToken);
         }
+
+        public async Task<int> UpdateNotQueryAsync(TEntity entity, bool autoSave = true, CancellationToken cancellationToken = default, bool isIgnoreCol = false, params Expression<Func<TEntity, object>>[] properties)
+        {
+           return await _baseRepository.UpdateNotQueryAsync(entity,autoSave,cancellationToken,isIgnoreCol,properties);
+        }
     }
 }

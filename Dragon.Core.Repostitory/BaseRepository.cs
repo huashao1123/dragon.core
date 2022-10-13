@@ -8,6 +8,7 @@ using System.Linq.Dynamic.Core;
 using System.Text;
 using System.Threading.Tasks;
 using Dragon.Core.ViewModel;
+using System.Reflection;
 
 namespace Dragon.Core.Repository
 {
@@ -70,7 +71,7 @@ namespace Dragon.Core.Repository
 
         public Task<TEntity?> GetEntityAsync(object Id, CancellationToken cancellationToken = default)
         {
-            return _dbSet.FindAsync(Id, cancellationToken).AsTask();
+            return _dbSet.FindAsync(new object[] { Id },cancellationToken).AsTask();
         }
         public Task<List<TEntity>> GetListAsync(CancellationToken cancellationToken = default)
         {
@@ -133,12 +134,49 @@ namespace Dragon.Core.Repository
         {
             _dbSet.Attach(entity);
             var updateEntity=_dbSet.Update(entity).Entity;
+            
             if (autoSave)
             {
                 await SaveAsync(cancellationToken);
             }
             return updateEntity;
         }
+        /// <summary>
+        /// 更新部分列或者忽略部分列
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="autoSave"></param>
+        /// <param name="cancellationToken"></param>
+        /// <param name="isIgnoreCol">当properties有值时，isIgnoreCol为true为忽略更新</param>
+        /// <param name="properties"></param>
+        /// <returns></returns>
+        public async Task<int> UpdateNotQueryAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToken = default,bool isIgnoreCol= false, params Expression<Func<TEntity, object>>[] properties)
+        {
+            var dbEntityEntry = _dbContext.Entry<TEntity>(entity);
+            if (properties.Any())
+            {
+                if (isIgnoreCol)
+                {
+                    dbEntityEntry.State = EntityState.Modified;
+                }
+                foreach (var property in properties)
+                {
+                    dbEntityEntry.Property(property).IsModified = !isIgnoreCol;
+                }
+            }
+            else
+            {
+                dbEntityEntry.State=EntityState.Modified;
+            }
+            int updateCount = 0;
+            if (autoSave)
+            {
+                updateCount=await SaveAsync(cancellationToken);
+            }
+            return updateCount;
+        }
+
+
 
         public async Task UpdateManyAsync(IEnumerable<TEntity> entities, bool autoSave = false, CancellationToken cancellationToken = default)
         {

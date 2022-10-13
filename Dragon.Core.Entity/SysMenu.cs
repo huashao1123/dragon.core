@@ -14,7 +14,7 @@ namespace Dragon.Core.Entity
         /// <summary>
         ///  菜单名
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
         /// <summary>
         /// 菜单类型（1目录 2菜单 3按钮）
         /// </summary>
@@ -22,7 +22,7 @@ namespace Dragon.Core.Entity
         /// <summary>
         /// 菜单路径
         /// </summary>
-        public string path { get; set; }
+        public string path { get; set; } = "";
         /// <summary>
         /// 路由组件
         /// </summary>

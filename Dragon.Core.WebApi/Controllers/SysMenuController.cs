@@ -24,6 +24,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("/getPermCode")]
+        [Authorize]
         public async Task<MessageModel<List<string?>>>GetPermCode()
         {
             int userId=Convert.ToInt32(_user.ID);
@@ -33,6 +34,7 @@ namespace Dragon.Core.WebApi.Controllers
             return model;
         }
         [HttpGet("/getMenuList")]
+        [Authorize]
         public async Task<MessageModel<List<MenuTreeViewModel>>> GetLoginMenuTree()
         {
             int userId = Convert.ToInt32(_user.ID);

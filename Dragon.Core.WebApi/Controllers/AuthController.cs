@@ -66,7 +66,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("/getUserInfo")]
-        [Authorize(Permissions.Name)]
+        [Authorize]
         public async Task<MessageModel<UserInfoModel>> GetUserInfo()
         {
             int id = Convert.ToInt32(_user.ID);
@@ -85,7 +85,7 @@ namespace Dragon.Core.WebApi.Controllers
             return data;
         }
         [HttpGet("/logout")]
-        [Authorize(Permissions.Name)]
+        [Authorize]
         public async Task<MessageModel<string>>Logout()
         {
            MessageModel<string> messageModel = new MessageModel<string>();

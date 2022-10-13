@@ -12,14 +12,14 @@ namespace Dragon.Core.ViewModel
         public int id { get; set; }
         public int menuType { get; set; }
         public string? createdName { get; set; }
-        public string name { get; set; }
+        public string? name { get; set; }
         public string title { get; set; }
         public int pid { get; set; }
         public string order { get; set; }
         public int status { get; set; }
         public string? icon { get; set; }
-        public string path { get; set; }
-        public string component { get; set; }
+        public string? path { get; set; }
+        public string? component { get; set; }
         public string? redirect { get; set; }
         public string? frameSrc { get; set; }
 

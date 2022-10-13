@@ -30,6 +30,7 @@ namespace Dragon.Core.Extensions
             CreateMap<SysDepartMent, DepartmentViewModel>().ForPath(d => d.pid, s => s.MapFrom(t => t.Pid));
             CreateMap<DepartmentInput, SysDepartMent>();
             CreateMap<UpdateDeptInput, SysDepartMent>();
+            CreateMap<RoleInput,SysRole>();
         }
     }
 }

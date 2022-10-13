@@ -134,5 +134,14 @@ namespace Dragon.Core.IRepository
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         Task<long> GetCountAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken);
+        /// <summary>
+        /// 更新部分列或者忽略部分列
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="autoSave"></param>
+        /// <param name="cancellationToken"></param>
+        /// <param name="isIgnoreCol">当properties有值时，isIgnoreCol为true为忽略更新,否则为更新部分列。</param>
+        /// <param name="properties">有值时，看isIgnoreCol，无值则为全部更新</param>
+        Task<int> UpdateNotQueryAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToken = default, bool isIgnoreCol = false, params Expression<Func<TEntity, object>>[] properties);
     }
 }

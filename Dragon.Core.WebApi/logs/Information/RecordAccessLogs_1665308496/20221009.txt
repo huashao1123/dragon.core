@@ -1,0 +1,1 @@
+2022-10-09 09:41:36.095 +08:00 [INF] {"User":"","IP":"::ffff:127.0.0.1","API":"/addapimodule","BeginTime":"2022-10-09 09:41:36","OPTime":"23ms","RequestMethod":"POST","RequestData":"{\"apiName\":\"dddd\",\"apiUrl\":\"dddd\",\"order\":0}","Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.37"}

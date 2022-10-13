@@ -13,6 +13,7 @@ namespace Dragon.Core.Data.Configs
     {
         public void Configure(EntityTypeBuilder<ApiModule> builder)
         {
+            builder.HasKey(x => x.Id);
             builder.Property(d => d.ApiName).HasMaxLength(500);
             builder.Property(d=>d.ApiUrl).HasMaxLength(500).IsRequired();
         }

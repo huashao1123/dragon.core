@@ -60,6 +60,6 @@ namespace Dragon.Core.ViewModel
         /// <summary>
         /// 页码容量
         /// </summary>
-        public virtual int PageSize { get; set; }
+        public virtual int PageSize { get; set; } = 10;
     }
 }

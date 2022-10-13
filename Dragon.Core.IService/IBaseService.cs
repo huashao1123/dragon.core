@@ -16,6 +16,8 @@ namespace Dragon.Core.IService
 
         Task<TEntity> UpdateAsync(TEntity entity, bool autoSave = true, CancellationToken cancellationToken = default);
 
+        Task<int> UpdateNotQueryAsync(TEntity entity, bool autoSave = true, CancellationToken cancellationToken = default, bool isIgnoreCol = false, params Expression<Func<TEntity, object>>[] properties);
+
         Task UpdateManyAsync(IEnumerable<TEntity> entities, bool autoSave = true, CancellationToken cancellationToken = default);
 
         Task DeleteAsync(TEntity entity, bool autoSave = true, CancellationToken cancellationToken = default);
