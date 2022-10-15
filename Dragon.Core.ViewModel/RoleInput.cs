@@ -9,7 +9,7 @@ namespace Dragon.Core.ViewModel
     public class RoleInput
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public string? Code { get; set; }
         public int Status { get; set; }
         /// <summary>
@@ -20,7 +20,7 @@ namespace Dragon.Core.ViewModel
         /// <summary>
         /// 数据范围类型
         /// </summary>
-        public  int DataScope { get; set; }
+        public int DataScope { get; set; } = 4;
 
         /// <summary>
         /// 备注

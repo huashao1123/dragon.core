@@ -51,6 +51,41 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.RoleController.SetRoleStatus(Dragon.Core.ViewModel.RoleInput)">
+            <summary>
+            设置角色状态
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.RoleController.GetRoleOwnMenuListAsync(System.Int32)">
+            <summary>
+            根据角色Id获取菜单树(前端区分父子节点)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.RoleController.GrantRoleMenuAsync(Dragon.Core.ViewModel.RoleMenuInPut)">
+            <summary>
+            根据角色授权菜单
+            </summary>
+            <param name="inPut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.RoleController.GetRoleDeptListAsync(System.Int32)">
+            <summary>
+            根据角色Id获取机构Id集合
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.RoleController.GrantRoleDept(Dragon.Core.ViewModel.RoleDeptInput)">
+            <summary>
+            授权部门数据权限
+            </summary>
+            <param name="roleDeptInput"></param>
+            <returns></returns>
+        </member>
         <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode">
             <summary>
             获取按钮权限(登录)

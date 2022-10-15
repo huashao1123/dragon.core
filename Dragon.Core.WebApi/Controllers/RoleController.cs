@@ -84,6 +84,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("/sysRole/ownmenu")]
+        [Authorize]
         public async Task<MessageModel<List<MenuListItem>>> GetRoleOwnMenuListAsync(int id)
         {
             var menuList=await _sysRoleMenuService.GetMenuList(id);
@@ -110,6 +111,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("/sysRole/ownDept")]
+        [Authorize]
         public async Task<MessageModel<List<int>>> GetRoleDeptListAsync(int id)
         {
             var deptIdList=await _sysRoleDeptService.GetDeptIdList(id);

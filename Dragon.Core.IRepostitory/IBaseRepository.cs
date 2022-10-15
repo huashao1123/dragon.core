@@ -143,5 +143,15 @@ namespace Dragon.Core.IRepository
         /// <param name="isIgnoreCol">当properties有值时，isIgnoreCol为true为忽略更新,否则为更新部分列。</param>
         /// <param name="properties">有值时，看isIgnoreCol，无值则为全部更新</param>
         Task<int> UpdateNotQueryAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToken = default, bool isIgnoreCol = false, params Expression<Func<TEntity, object>>[] properties);
+
+        /// <summary>
+        /// Gets a table
+        /// </summary>
+        IQueryable<TEntity> Table { get; }
+
+        /// <summary>
+        /// Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
+        /// </summary>
+        IQueryable<TEntity> TableNoTracking { get; }
     }
 }

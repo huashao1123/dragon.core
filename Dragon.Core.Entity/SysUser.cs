@@ -1,4 +1,6 @@
-﻿namespace Dragon.Core.Entity
+﻿using Dragon.Core.Entity.Enum;
+
+namespace Dragon.Core.Entity
 {
     /// <summary>
     /// 用户表
@@ -71,5 +73,15 @@
         /// 头像
         /// </summary>
         public string? Avater { get; set; }
+        /// <summary>
+        /// 账户类型
+        /// </summary>
+        public UserTypeEnum UserType { get; set; }= UserTypeEnum.None;
+        /// <summary>
+        /// 职位id
+        /// </summary>
+        public long PosId { get; set; }
+
+        public JobStatusEnum JobStatus { get; set; } = JobStatusEnum.On;
     }
 }

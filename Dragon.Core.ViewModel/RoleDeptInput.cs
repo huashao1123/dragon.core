@@ -11,6 +11,6 @@ namespace Dragon.Core.ViewModel
         public int id { get; set; }
 
         public int DataScope { get; set; }
-        public List<int> DeptIdList { get; set; }
+        public List<int>? DeptIdList { get; set; }
     }
 }

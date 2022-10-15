@@ -1,1 +1,0 @@
-2022-10-09 08:45:34.016 +08:00 [INF] {"User":"vben","IP":"::ffff:127.0.0.1","API":"/getapilist","BeginTime":"2022-10-09 08:45:33","OPTime":"73ms","RequestMethod":"GET","RequestData":"","Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.37"}

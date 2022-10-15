@@ -16,12 +16,20 @@ namespace Dragon.Core.Repository
     {
         private readonly IUintOfWork _uow;
         internal readonly DbContext _dbContext;
-        private readonly DbSet<TEntity> _dbSet;
+        //private readonly DbSet<TEntity> _dbSet;
+        //private DbSet<TEntity> dbSet;
+
+        public IQueryable<TEntity> Table => _dbSet;
+
+        public IQueryable<TEntity> TableNoTracking => _dbSet.AsNoTracking();
+
+        protected virtual DbSet<TEntity> _dbSet =>  _dbContext.Set<TEntity>();
+
         public BaseRepository(IUintOfWork uintOfWork)
         {
             _uow = uintOfWork;
             _dbContext=_uow.GetDbContext();
-            _dbSet=_dbContext.Set<TEntity>();
+           // _dbSet=_dbContext.Set<TEntity>();
 
         }
 

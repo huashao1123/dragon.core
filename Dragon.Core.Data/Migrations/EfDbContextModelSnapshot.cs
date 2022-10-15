@@ -275,6 +275,53 @@ namespace Dragon.Core.Data.Migrations
                     b.ToTable("SysRole");
                 });
 
+            modelBuilder.Entity("Dragon.Core.Entity.SysRoleDept", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CreatedId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CreatedName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DeptId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool?>("IsDrop")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UpdateId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UpdateName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SysRoleDept");
+                });
+
             modelBuilder.Entity("Dragon.Core.Entity.SysRoleMenuModule", b =>
                 {
                     b.Property<int>("Id")
@@ -469,6 +516,53 @@ namespace Dragon.Core.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SysUserDepartMent");
+                });
+
+            modelBuilder.Entity("Dragon.Core.Entity.SysUserDept", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CreatedId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CreatedName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DeptId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool?>("IsDrop")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UpdateId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UpdateName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SysUserDept");
                 });
 
             modelBuilder.Entity("Dragon.Core.Entity.SysUserRole", b =>

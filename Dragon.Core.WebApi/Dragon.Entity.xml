@@ -115,6 +115,56 @@
             自定义数据
             </summary>
         </member>
+        <member name="T:Dragon.Core.Entity.Enum.JobStatusEnum">
+            <summary>
+            岗位状态枚举
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.JobStatusEnum.On">
+            <summary>
+            在职
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.JobStatusEnum.Off">
+            <summary>
+            离职
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.JobStatusEnum.Leave">
+            <summary>
+            请假
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Normal">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Frozen">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.Enum.UserTypeEnum">
+            <summary>
+            账号类型枚举
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.UserTypeEnum.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.UserTypeEnum.None">
+            <summary>
+            普通账号
+            </summary>
+        </member>
+        <member name="F:Dragon.Core.Entity.Enum.UserTypeEnum.SuperAdmin">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
         <member name="T:Dragon.Core.Entity.MenuTypeEnum">
             <summary>
             系统菜单类型枚举
@@ -133,16 +183,6 @@
         <member name="F:Dragon.Core.Entity.MenuTypeEnum.Btn">
             <summary>
             按钮
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Normal">
-            <summary>
-            启用
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Frozen">
-            <summary>
-            禁用
             </summary>
         </member>
         <member name="P:Dragon.Core.Entity.SysDepartMent.Name">
@@ -254,6 +294,21 @@
             数据范围（1全部数据 2本部门及以下数据 3本部门数据 4仅本人数据 5自定义数据）
             </summary>
         </member>
+        <member name="T:Dragon.Core.Entity.SysRoleDept">
+            <summary>
+            角色拥有的自定义数据权限表
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRoleDept.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysRoleDept.DeptId">
+            <summary>
+            部门id
+            </summary>
+        </member>
         <member name="T:Dragon.Core.Entity.SysRoleMenuModule">
             <summary>
             角色菜单接口权限关系对应表
@@ -349,6 +404,16 @@
             头像
             </summary>
         </member>
+        <member name="P:Dragon.Core.Entity.SysUser.UserType">
+            <summary>
+            账户类型
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUser.PosId">
+            <summary>
+            职位id
+            </summary>
+        </member>
         <member name="T:Dragon.Core.Entity.SysUserDepartMent">
             <summary>
             用户部门关系对应表
@@ -362,6 +427,21 @@
         <member name="P:Dragon.Core.Entity.SysUserDepartMent.DepartMentId">
             <summary>
             部门ID
+            </summary>
+        </member>
+        <member name="T:Dragon.Core.Entity.SysUserDept">
+            <summary>
+            用户拥有的自定义数据权限
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUserDept.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysUserDept.DeptId">
+            <summary>
+            部门id
             </summary>
         </member>
         <member name="T:Dragon.Core.Entity.SysUserRole">
