@@ -15,14 +15,16 @@ using System.Threading.Tasks;
 
 namespace Dragon.Core.Service
 {
-    public class DepartmentService : BaseService<SysDepartMent>, IDepartmentService
+    public class DepartmentService : IDepartmentService
     {
         private readonly IUser _user;
         private readonly IMapper _mapper;
-        public DepartmentService(IBaseRepository<SysDepartMent> baseRepository,IUser user,IMapper mapper) : base(baseRepository)
+        private readonly IDepartMentRepository _departMentRepository;
+        public DepartmentService(IDepartMentRepository departMentRepository,IUser user,IMapper mapper) 
         {
             _user = user;
             _mapper = mapper;
+            _departMentRepository = departMentRepository;
         }
 
         public async Task<bool> AddDepartment(DepartmentInput departmentInput)
@@ -31,7 +33,7 @@ namespace Dragon.Core.Service
             entity.CreatedName = _user.Name;
             entity.CreatedId = Convert.ToInt32(_user.ID);
             entity.CreatedTime = DateTime.Now;
-            await InsertAsync(entity);
+            await _departMentRepository.InsertAsync(entity);
             return true;
         }
 
@@ -52,7 +54,7 @@ namespace Dragon.Core.Service
             }
             Expression<Func<SysDepartMent, bool>> expression2 = e => e.IsDrop == false;
             expression = expression ==null ? expression2 : ExpressionHelper.CombineExpressions(expression,expression2);
-            var deptList = await GetListAsync(expression);
+            var deptList = await _departMentRepository.GetListAsync(expression);
             var deptViewModeList= _mapper.Map<List<DepartmentViewModel>>(deptList);
             deptViewModeList = deptViewModeList.ToTree((r) => { return r.pid == 0; }, (r, c) => { return r.id == c.pid; }, (r, dataList) =>
             {
@@ -68,8 +70,20 @@ namespace Dragon.Core.Service
             updateEntity.UpdateName = _user.Name;
             updateEntity.UpdateId = Convert.ToInt32(_user.ID);
             updateEntity.UpdateTime = DateTime.Now;
-            await UpdateAsync(updateEntity);
+            await _departMentRepository.UpdateAsync(updateEntity);
             return true;
+        }
+
+        public Task<SysDepartMent?> GetDeptByIdAsync(int id)
+        {
+            var entity = _departMentRepository.FindAsync(d => d.Id == id);
+            return entity;
+        }
+
+        public async Task<SysDepartMent?> UpdateAsync(SysDepartMent sysDepartMent)
+        {
+            var entity = await _departMentRepository.UpdateAsync(sysDepartMent, true);
+            return entity;
         }
     }
 }

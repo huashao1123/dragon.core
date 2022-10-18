@@ -1,4 +1,5 @@
-﻿using Dragon.Core.IRepository;
+﻿using Dragon.Core.Common;
+using Dragon.Core.IRepository;
 using Dragon.Core.IService;
 using Dragon.Core.ViewModel;
 using System;
@@ -12,11 +13,12 @@ namespace Dragon.Core.Service
 {
     public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : class
     {
-        private readonly IBaseRepository<TEntity> _baseRepository;
+        protected readonly IBaseRepository<TEntity> _baseRepository;
         public BaseService(IBaseRepository<TEntity> baseRepository)
         {
             _baseRepository=baseRepository;
         }
+
         public async Task DeleteAsync(TEntity entity, bool autoSave = true, CancellationToken cancellationToken = default)
         {
             await _baseRepository.DeleteAsync(entity, autoSave, cancellationToken);

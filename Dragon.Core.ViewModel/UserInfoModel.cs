@@ -34,6 +34,6 @@ namespace Dragon.Core.ViewModel
         /// <summary>
         /// 角色集合
         /// </summary>
-        public List<RoleInfo> roles { get; set; }
+        public List<LoginRole> roles { get; set; }
     }
 }

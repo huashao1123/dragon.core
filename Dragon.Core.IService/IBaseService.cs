@@ -1,4 +1,4 @@
-﻿using Dragon.Core.ViewModel;
+﻿using Dragon.Core.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,5 +44,6 @@ namespace Dragon.Core.IService
         Task<long> GetCountAsync(CancellationToken cancellationToken = default);
 
         Task<long> GetCountAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken);
+
     }
 }

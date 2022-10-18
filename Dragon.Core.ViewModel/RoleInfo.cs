@@ -8,16 +8,17 @@ namespace Dragon.Core.ViewModel
 {
     public class RoleInfo
     {
+        public int Id { get; set; }
         /// <summary>
         /// 角色名称
         /// </summary>
         /// <example>admin</example>
-        public string RoleName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// 角色编码
         /// </summary>
         /// <example>123456</example>
-        public string Value { get; set; }
+        public string Code { get; set; }
     }
 }

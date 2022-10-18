@@ -72,6 +72,7 @@ namespace Dragon.Core.WebApi.Controllers
             int id = Convert.ToInt32(_user.ID);
             var data = new MessageModel<UserInfoModel>();
             var user = await _sysUserService.FindAsync(d=>d.Id==id);
+            var roleList = await _userRoleService.GetRoleInfoList(id);
             UserInfoModel userInfoModel = new UserInfoModel
             {
                 avatar = user?.Avater,
@@ -79,7 +80,7 @@ namespace Dragon.Core.WebApi.Controllers
                 Username = _user.Name,
                 RealName = user!.Account,
                 Desc = user.JobName,
-                roles = await _userRoleService.GetRoleInfoList(id)
+                roles = roleList.Select(r => new LoginRole { RoleName = r.Name,Value=r.Code }).ToList(),
             };
             data.result = userInfoModel;
             return data;

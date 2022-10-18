@@ -4,6 +4,103 @@
     "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.IService\\Dragon.Core.IService.csproj": {}
   },
   "projects": {
+    "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Common\\Dragon.Core.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Common\\Dragon.Core.Common.csproj",
+        "projectName": "Dragon.Core.Common",
+        "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Common\\Dragon.Core.Common.csproj",
+        "packagesPath": "E:\\nugetClient\\.nuget\\packages",
+        "outputPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\longhaihua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://192.168.100.64:8008/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.22.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Entity\\Dragon.Core.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -91,6 +188,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Common\\Dragon.Core.Common.csproj": {
+                "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Common\\Dragon.Core.Common.csproj"
+              },
               "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Entity\\Dragon.Core.Entity.csproj": {
                 "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Entity\\Dragon.Core.Entity.csproj"
               },

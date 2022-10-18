@@ -35,4 +35,18 @@ namespace Dragon.Core.ViewModel
     {
 
     }
+
+    public class UserRoleInput
+    {
+        public int Id { get; set; }
+        public int DeptId { get; set; }
+
+        public List<int>? RoleIdList { get; set; }
+    }
+
+    public class UserDeptInput
+    {
+        public int Id { get; set; }
+        public List<int>? DeptIdList { get; set; }
+    }
 }

@@ -7,8 +7,8 @@ using System.Linq.Expressions;
 using System.Linq.Dynamic.Core;
 using System.Text;
 using System.Threading.Tasks;
-using Dragon.Core.ViewModel;
 using System.Reflection;
+using Dragon.Core.Common;
 
 namespace Dragon.Core.Repository
 {

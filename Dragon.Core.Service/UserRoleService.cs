@@ -34,7 +34,7 @@ namespace Dragon.Core.Service
             {
                 var arr = userRoles.Select(d => d.RoleId).ToArray();
                 var roles = rolelist.Where(d => arr.Contains(d.Id));
-               roleInfoList=roles.Select(r=>new RoleInfo { RoleName=r.Name,Value=r.Code}).ToList();
+               roleInfoList=roles.Select(r=>new RoleInfo { Id=r.Id, Name=r.Name,Code=r.Code}).ToList();
             }
             return roleInfoList;
         }
@@ -58,6 +58,18 @@ namespace Dragon.Core.Service
             return roleNames;
         }
 
+        public async Task<bool> GrantRole(UserRoleInput userRoleInput)
+        {
+            await DeleteAsync(d=>d.UserId==userRoleInput.Id);
+            var data = userRoleInput.RoleIdList.Select(u => new SysUserRole
+            {
+                UserId = userRoleInput.Id,
+                RoleId = u
+            }).ToList();
+            await InsertManyAsync(data);
+            return true;
+        }
 
+       
     }
 }

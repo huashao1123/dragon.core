@@ -20,5 +20,7 @@
         /// <param name="userId"></param>
         /// <returns></returns>
         public Task<List<int>>GetRoleId(int userId);
+
+        public Task<bool> GrantRole(UserRoleInput userRoleInput);
     }
 }

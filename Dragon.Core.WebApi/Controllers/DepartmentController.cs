@@ -46,7 +46,7 @@ namespace Dragon.Core.WebApi.Controllers
         {
             var data = new MessageModel<bool>();
             data.result = false;
-            var entity = await _departmentService.FindAsync(d => d.Id == id);
+            var entity = await _departmentService.GetDeptByIdAsync(id);
             if (entity != null)
             {
                 entity.IsDrop = true;

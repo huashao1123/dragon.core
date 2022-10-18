@@ -1,4 +1,5 @@
-﻿using Dragon.Core.ViewModel;
+﻿using Dragon.Core.Common;
+using Dragon.Core.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

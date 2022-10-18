@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dragon.Core.Common\Dragon.Core.Common.csproj" />
     <ProjectReference Include="..\Dragon.Core.Entity\Dragon.Core.Entity.csproj" />
     <ProjectReference Include="..\Dragon.Core.ViewModel\Dragon.Core.ViewModel.csproj" />
   </ItemGroup>
