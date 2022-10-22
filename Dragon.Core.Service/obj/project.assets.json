@@ -633,7 +633,7 @@
           "Dragon.Core.Common": "1.0.0",
           "Dragon.Core.Entity": "1.0.0",
           "Dragon.Core.ViewModel": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.8",
+          "Microsoft.EntityFrameworkCore": "6.0.10",
           "System.Linq.Dynamic.Core": "1.2.20"
         },
         "compile": {

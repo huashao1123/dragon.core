@@ -80,9 +80,10 @@ namespace Dragon.Core.WebApi
                 builder.Services.AddDistributedMemoryCache(); //注入分布式内存缓存
                 builder.Services.AddSession();
                 builder.Services.AddIpPolicyRateLimitSetup(builder.Configuration);//添加限流服务
-
+                
                 builder.Services.AddControllers(o =>
                 {
+                    o.Filters.Add(typeof(ResultFilterAttribute));
                     o.Filters.Add(typeof(TransactionScopeFilter));//事务过滤器
                                                                   // 全局异常过滤
                     o.Filters.Add(typeof(GlobalExceptionsFilter));
@@ -109,6 +110,7 @@ namespace Dragon.Core.WebApi
                     //设置本地时间而非UTC时间
                     options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
                 });
+                builder.Services.AddCustomModelStateSetup();
                 builder.Services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());//使控制器可以采用属性注入
                 //支持编码大全 例如:支持 System.Text.Encoding.GetEncoding("GB2312")  System.Text.Encoding.GetEncoding("GB18030") 
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);

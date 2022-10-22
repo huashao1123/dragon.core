@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dragon.Core.WebApi.Controllers
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -17,7 +19,7 @@ namespace Dragon.Core.WebApi.Controllers
         {
             _logger = logger;
         }
-
+        
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -28,6 +30,22 @@ namespace Dragon.Core.WebApi.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpPost(Name ="test1")]
+        public MessageModel<string>Post(string name)
+        {
+            throw new Exception(name);
+            var data=new MessageModel<string>();
+            data.result = name;
+            return data;
+        }
+
+        [HttpPost("/test2")]
+        public MessageModel Test(string name)
+        {
+            var data = new MessageModel();
+            data.result = name;
+            return data;
         }
     }
 }

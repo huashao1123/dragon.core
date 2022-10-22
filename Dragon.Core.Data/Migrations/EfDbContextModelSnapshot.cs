@@ -15,7 +15,7 @@ namespace Dragon.Core.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.9");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
 
             modelBuilder.Entity("Dragon.Core.Entity.ApiModule", b =>
                 {
@@ -420,6 +420,9 @@ namespace Dragon.Core.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("JobStatus")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("LastErrTime")
                         .HasColumnType("TEXT");
 
@@ -441,6 +444,9 @@ namespace Dragon.Core.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
+                    b.Property<long>("PosId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Remark")
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
@@ -460,6 +466,9 @@ namespace Dragon.Core.Data.Migrations
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("UserType")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("WeChat")
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
@@ -469,53 +478,6 @@ namespace Dragon.Core.Data.Migrations
                     b.HasIndex("Name");
 
                     b.ToTable("SysUser");
-                });
-
-            modelBuilder.Entity("Dragon.Core.Entity.SysUserDepartMent", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CreatedId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CreatedName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("CreatedTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("DepartMentId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool?>("IsDrop")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Order")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Remark")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("UpdateId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UpdateName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime?>("UpdateTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SysUserDepartMent");
                 });
 
             modelBuilder.Entity("Dragon.Core.Entity.SysUserDept", b =>

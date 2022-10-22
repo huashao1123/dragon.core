@@ -152,6 +152,11 @@
             全局路由前缀公约
             </summary>
         </member>
+        <member name="T:Dragon.Core.WebApi.Filter.ResultFilterAttribute">
+            <summary>
+            增加统一返回格式
+            </summary>
+        </member>
         <member name="T:Dragon.Core.WebApi.Filter.TransactionScopeFilter">
             <summary>
             事务过滤器

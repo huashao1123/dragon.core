@@ -163,6 +163,7 @@ C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

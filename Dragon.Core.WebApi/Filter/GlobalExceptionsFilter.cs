@@ -1,6 +1,7 @@
 ﻿using Dragon.Core.Common;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
+using Dragon.Core.Common.Helper;
 
 namespace Dragon.Core.WebApi.Filter
 {
@@ -22,10 +23,10 @@ namespace Dragon.Core.WebApi.Filter
 
         public void OnException(ExceptionContext context)
         {
-            //var json = new MessageModel<string>();
+            var json = new MessageModel<string>();
 
-            //json.msg = context.Exception.Message;//错误信息
-            //json.status = 500;//500异常 
+            json.message = context.Exception.Message;//错误信息
+            json.code = 500;//500异常 
             //var errorAudit = "Unable to resolve service for";
             //if (!string.IsNullOrEmpty(json.msg) && json.msg.Contains(errorAudit))
             //{
@@ -37,7 +38,7 @@ namespace Dragon.Core.WebApi.Filter
                 //json.msgDev = context.Exception.StackTrace;//堆栈信息
             }
             var res = new ContentResult();
-            //res.Content = JsonHelper.GetJSON<MessageModel<string>>(json);
+            res.Content = JsonHelper.GetJSON<MessageModel<string>>(json);
 
             context.Result = res;
 

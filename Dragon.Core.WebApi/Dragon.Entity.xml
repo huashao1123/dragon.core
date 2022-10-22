@@ -414,21 +414,6 @@
             职位id
             </summary>
         </member>
-        <member name="T:Dragon.Core.Entity.SysUserDepartMent">
-            <summary>
-            用户部门关系对应表
-            </summary>
-        </member>
-        <member name="P:Dragon.Core.Entity.SysUserDepartMent.UserId">
-            <summary>
-            用户Id
-            </summary>
-        </member>
-        <member name="P:Dragon.Core.Entity.SysUserDepartMent.DepartMentId">
-            <summary>
-            部门ID
-            </summary>
-        </member>
         <member name="T:Dragon.Core.Entity.SysUserDept">
             <summary>
             用户拥有的自定义数据权限

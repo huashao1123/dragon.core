@@ -212,7 +212,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.10, )"
             },
             "System.Linq.Dynamic.Core": {
               "target": "Package",
