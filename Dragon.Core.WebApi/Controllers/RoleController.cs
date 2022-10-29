@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
+using System.Linq;
 
 namespace Dragon.Core.WebApi.Controllers
 {
@@ -28,6 +29,14 @@ namespace Dragon.Core.WebApi.Controllers
             messageModel.result= await _roleService.GetPageRoleListAsync(rolePageInput);
             return messageModel;
         }
+        [HttpGet("/sysrole/list")]
+        public async Task<List<RoleInfo>>GetRoleListAsync()
+        {
+            // 若非超级管理员则只取拥有角色Id集合
+            var roleList = await _roleService.GetListAsync(r => r.IsDrop == false);
+            return roleList.Select(r => new RoleInfo { Code = r.Code, Id = r.Id, Name = r.Name }).ToList();
+        }
+
 
         [HttpPost("/sysrole/add")]
         public async Task<MessageModel<bool>>AddRoleAsync(RoleInput role)

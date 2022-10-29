@@ -1,3 +1,4 @@
+using Dragon.Core.WebApi.Filter;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,7 +35,7 @@ namespace Dragon.Core.WebApi.Controllers
         [HttpPost(Name ="test1")]
         public MessageModel<string>Post(string name)
         {
-            throw new Exception(name);
+            throw new UserFriendlyException(name);
             var data=new MessageModel<string>();
             data.result = name;
             return data;
@@ -46,6 +47,16 @@ namespace Dragon.Core.WebApi.Controllers
             var data = new MessageModel();
             data.result = name;
             return data;
+        }
+
+        [HttpPost]
+        [Route("/test1")]
+        public async Task<IActionResult> GetString(string name)
+        {
+            return await Task.Run(() =>
+            {
+                return NotFound(name);
+            });
         }
     }
 }

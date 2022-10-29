@@ -83,7 +83,7 @@ namespace Dragon.Core.WebApi
                 
                 builder.Services.AddControllers(o =>
                 {
-                    o.Filters.Add(typeof(ResultFilterAttribute));
+                    o.Filters.Add(typeof(ApiResultFilter));
                     o.Filters.Add(typeof(TransactionScopeFilter));//事务过滤器
                                                                   // 全局异常过滤
                     o.Filters.Add(typeof(GlobalExceptionsFilter));

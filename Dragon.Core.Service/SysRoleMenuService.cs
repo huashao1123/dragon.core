@@ -16,10 +16,14 @@ namespace Dragon.Core.Service
     {
         readonly IBaseRepository<SysMenu> _menuRepository;
         readonly IMapper _mapper;
-        public SysRoleMenuService(IBaseRepository<SysRoleMenuModule> baseRepository, IBaseRepository<SysMenu> menuRepository,IMapper mapper) : base(baseRepository)
+        readonly IBaseRepository<SysRole> _roleRepository;
+        readonly IBaseRepository<ApiModule> _apiModuleRepository;
+        public SysRoleMenuService(IBaseRepository<SysRoleMenuModule> baseRepository, IBaseRepository<SysMenu> menuRepository,IMapper mapper, IBaseRepository<SysRole> roleRepository, IBaseRepository<ApiModule> apiModuleRepository) : base(baseRepository)
         {
             _menuRepository = menuRepository;
             _mapper = mapper;
+            _roleRepository = roleRepository;
+            _apiModuleRepository = apiModuleRepository;
         }
 
         public async Task<List<MenuListItem>> GetMenuList(int roleId)
@@ -48,6 +52,24 @@ namespace Dragon.Core.Service
             }).ToList();
             await InsertManyAsync(menus);
             return true;
+        }
+
+        public async Task<List<RoleApiUrl>>GetApiUrlsAsync()
+        {
+            var roleApiList=await GetListAsync(d => d.IsDrop == false);
+            var roleUrlList=new List<RoleApiUrl>();
+            foreach (var item in roleApiList)
+            {
+                int roleId = item.RoleId;
+                int mid = item.Mid;
+                string? name = (await _roleRepository.FindAsync(d=>d.Id==roleId))?.Name;
+                string? url = (await _apiModuleRepository.GetEntityAsync(mid))?.ApiUrl;
+                if (!string.IsNullOrWhiteSpace(name)&& !string.IsNullOrWhiteSpace(url))
+                {
+                    roleUrlList.Add(new RoleApiUrl { roleName = name, apiurl = url });
+                }
+            }
+            return roleUrlList;
         }
     }
 }

@@ -44,6 +44,18 @@ namespace Dragon.Core.Common
 
         public string ID => GetClaimValueByType("jti").FirstOrDefault();
 
+        public bool IsSuperAdmin => CheckIsSuperAdmin();
+
+        private bool CheckIsSuperAdmin()
+        {
+            string superAdmin = GetClaimValueByType(ClaimConst.SuperAdmin).FirstOrDefault();
+            if (!string.IsNullOrWhiteSpace(superAdmin))
+            {
+                return string.Equals(superAdmin, ClaimConst.SuperAdmin, StringComparison.OrdinalIgnoreCase);
+            }
+            return false;
+        }
+
         public bool IsAuthenticated()
         {
             return _accessor.HttpContext.User.Identity.IsAuthenticated;

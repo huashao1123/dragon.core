@@ -35,6 +35,7 @@ namespace Dragon.Core.Service
             SysUser sysUser=_mapper.Map<SysUser>(userInput);
             sysUser.CreatedName = _user.Name;
             sysUser.CreatedTime = DateTime.Now;
+            sysUser.Password = "aaaa@123";
             await InsertAsync(sysUser);
             return true;
         }
@@ -57,7 +58,7 @@ namespace Dragon.Core.Service
             SysUser sysUser = _mapper.Map<SysUser>(userInput);
             sysUser.UpdateName = _user.Name;
             sysUser.UpdateTime = DateTime.Now;
-            int count = await UpdateNotQueryAsync(sysUser, isIgnoreCol: true, properties: new Expression<Func<SysUser, object>>[] { d => d.CreatedName, d => d.CreatedTime,d=>d.UserType });
+            int count = await UpdateNotQueryAsync(sysUser, isIgnoreCol: true, properties: new Expression<Func<SysUser, object>>[] { d => d.CreatedName, d => d.CreatedTime,d=>d.UserType,d=>d.Password });
             return count > 0;
         }
 
@@ -69,7 +70,7 @@ namespace Dragon.Core.Service
                 UserId=userDeptInput.Id,
                 DeptId=u
             });
-            await _sysUserDeptRepository.InsertManyAsync(data);
+            await _sysUserDeptRepository.InsertManyAsync(data,true);
             return true;
         }
 

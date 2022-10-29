@@ -33,6 +33,10 @@ namespace Dragon.Core.WebApi.Controllers
             model.result =await _sysMenuService.GetPermCodes(roleIds);
             return model;
         }
+        /// <summary>
+        /// 获取登录导航树
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("/getMenuList")]
         [Authorize]
         public async Task<MessageModel<List<MenuTreeViewModel>>> GetLoginMenuTree()
@@ -40,7 +44,7 @@ namespace Dragon.Core.WebApi.Controllers
             int userId = Convert.ToInt32(_user.ID);
             List<int> roleIds = await _roleService.GetRoleId(userId);//到时根据角色来显示菜单
             var model = new MessageModel<List<MenuTreeViewModel>>();
-            model.result = await _sysMenuService.GetTreeMenuList();
+            model.result = await _sysMenuService.GetTreeMenuList(roleIds);
             return model;
         }
 

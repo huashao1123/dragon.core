@@ -20,7 +20,7 @@ namespace Dragon.Core.WebApi.Controllers
             _userRoleService = userRoleService;
         }
         [HttpGet("/sysuser/pagelist")]
-        public async Task<MessageModel<PageModel<UserViewModel>>> GetUserPageListAsync(UserPageInput userPageInput)
+        public async Task<MessageModel<PageModel<UserViewModel>>> GetUserPageListAsync([FromQuery] UserPageInput userPageInput)
         {
             var userPageList=await _userService.GetPageUserListAsynce(userPageInput);
             MessageModel<PageModel<UserViewModel>> messageModel = new MessageModel<PageModel<UserViewModel>>();
@@ -62,14 +62,14 @@ namespace Dragon.Core.WebApi.Controllers
         }
 
         [HttpPost("/sysuser/setstatus")]
-        public async Task<MessageModel<bool>>SetUserStatusAsync(int id,int status)
+        public async Task<MessageModel<bool>>SetUserStatusAsync(UserStatus userStatus)
         {
             var data = new MessageModel<bool>();
             data.result = false;
-            var entity = await _userService.FindAsync(d => d.Id == id);
+            var entity = await _userService.FindAsync(d => d.Id == userStatus.Id);
             if (entity != null)
             {
-                entity.Status = (StateEnum)status;
+                entity.Status = (StateEnum)userStatus.Status;
                 await _userService.UpdateAsync(entity);
                 data.result = true;
             }
@@ -98,11 +98,11 @@ namespace Dragon.Core.WebApi.Controllers
         }
 
         [HttpGet("/sysuser/ownrolelist")]
-        public async Task<MessageModel<List<RoleInfo>>>GetOwnUserRoleListAsync(int userId)
+        public async Task<MessageModel<List<int>>>GetOwnUserRoleListAsync(int userId)
         {
-            var roleInfoList = await _userRoleService.GetRoleInfoList(userId);
-            var data=new MessageModel<List<RoleInfo>>();
-            data.result=roleInfoList;
+            var roleIdList = await _userRoleService.GetRoleId(userId);
+            var data=new MessageModel<List<int>>();
+            data.result= roleIdList;
             return data;
         }
 

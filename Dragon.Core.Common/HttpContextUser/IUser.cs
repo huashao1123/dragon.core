@@ -11,6 +11,9 @@ namespace Dragon.Core.Common
     {
         string Name { get; }
         string ID { get; }
+
+        bool IsSuperAdmin { get; }   
+
         bool IsAuthenticated();
         IEnumerable<Claim> GetClaimsIdentity();
         List<string> GetClaimValueByType(string ClaimType);

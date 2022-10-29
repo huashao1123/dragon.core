@@ -4,6 +4,11 @@
         <name>Dragon.Core.WebApi</name>
     </assembly>
     <members>
+        <member name="T:Dragon.Core.WebApi.IgnoreApiResultAttribute">
+            <summary>
+            是否忽略统一返回格式
+            </summary>
+        </member>
         <member name="T:Dragon.Core.WebApi.TransactionalAttribute">
             <summary>
             事务特性
@@ -92,6 +97,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree">
+            <summary>
+            获取登录导航树
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.MenuListAsync(Dragon.Core.ViewModel.MenuParams)">
             <summary>
             菜单列表
@@ -119,6 +130,11 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:Dragon.Core.WebApi.Filter.ApiResultFilter">
+            <summary>
+            增加统一返回格式
+            </summary>
         </member>
         <member name="M:Dragon.Core.WebApi.Filter.AutofacPropertityModuleReg.Load(Autofac.ContainerBuilder)">
             <summary>
@@ -150,11 +166,6 @@
         <member name="T:Dragon.Core.WebApi.Filter.GlobalRoutePrefixFilter">
             <summary>
             全局路由前缀公约
-            </summary>
-        </member>
-        <member name="T:Dragon.Core.WebApi.Filter.ResultFilterAttribute">
-            <summary>
-            增加统一返回格式
             </summary>
         </member>
         <member name="T:Dragon.Core.WebApi.Filter.TransactionScopeFilter">

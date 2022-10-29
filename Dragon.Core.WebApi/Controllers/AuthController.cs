@@ -35,11 +35,12 @@ namespace Dragon.Core.WebApi.Controllers
         public async Task<MessageModel<TokenInfoViewModel>>Login(LoginInput loginInput)
         {
             string userName = loginInput.UserName;
-            string password = loginInput.Password;
+            string password = MD5Util.GetMD5_32(loginInput.Password);
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
             {
                 return Failed<TokenInfoViewModel>("用户名或者密码不能为空");
             }
+            password = MD5Util.GetMD5_32(loginInput.Password);
             var user = await _sysUserService.FindAsync(d => d.Name == userName && d.Password == password);
             if (user != null)
             {
@@ -47,9 +48,11 @@ namespace Dragon.Core.WebApi.Controllers
                 //如果是基于用户的授权策略，这里要添加用户;如果是基于角色的授权策略，这里要添加角色
                 var claims = new List<Claim>
                 {
+                    new Claim(ClaimConst.SuperAdmin,user.UserType.ToString()),
                     new Claim(ClaimTypes.Name, userName),
                     new Claim(JwtRegisteredClaimNames.Jti,user.Id.ToString()),
-                     new Claim(ClaimTypes.Expiration, DateTime.Now.AddSeconds(_requirement.Expiration.TotalSeconds).ToString())
+                    new Claim(JwtRegisteredClaimNames.Iat, DateTime.Now.ToString()),
+                    new Claim(ClaimTypes.Expiration, DateTime.Now.AddSeconds(_requirement.Expiration.TotalSeconds).ToString())
                 };
                 claims.AddRange(userRoles.Split(',').Select(s => new Claim(ClaimTypes.Role, s)));
                 var token = JwtToken.BuildJwtToken(claims.ToArray(), _requirement);

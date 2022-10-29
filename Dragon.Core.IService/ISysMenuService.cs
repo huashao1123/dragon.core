@@ -12,7 +12,7 @@
         /// 获取登录菜单树
         /// </summary>
         /// <returns></returns>
-        public Task<List<MenuTreeViewModel>> GetTreeMenuList();
+        public Task<List<MenuTreeViewModel>> GetTreeMenuList(List<int> roleIds);
         /// <summary>
         /// 获取菜单列表
         /// </summary>

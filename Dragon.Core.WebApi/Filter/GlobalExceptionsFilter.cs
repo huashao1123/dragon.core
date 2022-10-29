@@ -27,12 +27,17 @@ namespace Dragon.Core.WebApi.Filter
 
             json.message = context.Exception.Message;//错误信息
             json.code = 500;//500异常 
+           
             //var errorAudit = "Unable to resolve service for";
             //if (!string.IsNullOrEmpty(json.msg) && json.msg.Contains(errorAudit))
             //{
             //    json.msg = json.msg.Replace(errorAudit, $"（若新添加服务，需要重新编译项目）{errorAudit}");
             //}
-
+            if (context.Exception is UserFriendlyException)
+            {
+                json.code = 299;
+                json.result = context.Exception.Message;
+            }
             if (_env.EnvironmentName.ObjToString().Equals("Development"))
             {
                 //json.msgDev = context.Exception.StackTrace;//堆栈信息

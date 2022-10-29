@@ -31,6 +31,8 @@ namespace Dragon.Core.Extensions
             CreateMap<DepartmentInput, SysDepartMent>();
             CreateMap<UpdateDeptInput, SysDepartMent>();
             CreateMap<RoleInput,SysRole>();
+            CreateMap<SysUser, UserViewModel>();
+            CreateMap<UserInput, SysUser>();
         }
     }
 }

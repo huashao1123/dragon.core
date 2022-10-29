@@ -49,4 +49,10 @@ namespace Dragon.Core.ViewModel
         public int Id { get; set; }
         public List<int>? DeptIdList { get; set; }
     }
+
+    public class UserStatus
+    {
+        public int Id { get; set; }
+        public int Status { get; set; }
+    }
 }

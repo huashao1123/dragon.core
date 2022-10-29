@@ -11,5 +11,7 @@ namespace Dragon.Core.IService
         Task<List<MenuListItem>> GetMenuList(int roleId);
 
         Task<bool> GrantMenu(RoleMenuInPut roleMenuInPut);
+
+        Task<List<RoleApiUrl>> GetApiUrlsAsync();
     }
 }

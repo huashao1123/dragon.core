@@ -18,11 +18,13 @@ namespace Dragon.Core.Service
         private readonly IBaseRepository<SysRoleMenuModule> _sysRoleMenuModule;
         readonly IMapper _mapper;
         private readonly IBaseRepository<ApiModule> _apiRepository;
-        public SysMenuService(IBaseRepository<SysMenu> baseRepository, IBaseRepository<SysRoleMenuModule> sysRoleMenuModule,IMapper mapper, IBaseRepository<ApiModule> apiRepository) : base(baseRepository)
+        private readonly IUser _user;
+        public SysMenuService(IBaseRepository<SysMenu> baseRepository, IBaseRepository<SysRoleMenuModule> sysRoleMenuModule,IMapper mapper, IBaseRepository<ApiModule> apiRepository, IUser user) : base(baseRepository)
         {
             _sysRoleMenuModule = sysRoleMenuModule;
             _mapper = mapper;
             _apiRepository = apiRepository;
+            _user = user;
         }
 
         public async Task<bool> AddMenuAsync(MenuInput menuInput)
@@ -78,18 +80,27 @@ namespace Dragon.Core.Service
         /// <returns></returns>
         public async Task<List<string?>> GetPermCodes(List<int> roleIds)
         {
-            var menuModules = await _sysRoleMenuModule.GetListAsync(d=>roleIds.Contains(d.RoleId));
-            List<int> menuIds = menuModules.Select(d => d.MenuId).ToList();
-            var menusList=await GetListAsync(d=>menuIds.Contains(d.Id) && d.MenuType==MenuTypeEnum.Btn);
-            List<string?> permCodes = menusList.Select(d=>d.Permission).ToList();
+
+            List<int> menuIds =await GetRoleMenuIdList(roleIds);
+            var menusList=await GetListAsync(d=>d.IsDrop==false && d.MenuType==MenuTypeEnum.Btn);
+            List<string?> permCodes = menusList.WhereIf(d=>menuIds.Contains(d.Id),!_user.IsSuperAdmin).Select(d=>d.Permission).ToList();
             return permCodes;
         }
 
-        public async Task<List<MenuTreeViewModel>> GetTreeMenuList()
+
+        private async Task<List<int>>GetRoleMenuIdList(List<int> roleIds)
+        {
+            var menuModules = await _sysRoleMenuModule.GetListAsync(d => roleIds.Contains(d.RoleId));
+            List<int> menuIds = _user.IsSuperAdmin ? new List<int>() : menuModules.Select(d => d.MenuId).ToList();
+            return menuIds;
+        }
+
+
+        public async Task<List<MenuTreeViewModel>> GetTreeMenuList(List<int> roleIds)
         {
             var menuList=await GetListAsync(d=>d.IsDrop==false && d.MenuType!=MenuTypeEnum.Btn);
-
-            menuList = menuList.ToTree((r) => { return r.ParId == 0; }, (r, c) => { return r.Id == c.ParId; }, (r, dataList) =>
+            List<int> menuIds = await GetRoleMenuIdList(roleIds);
+            menuList = menuList.WhereIf(d => menuIds.Contains(d.Id),!_user.IsSuperAdmin).ToList().ToTree((r) => { return r.ParId == 0; }, (r, c) => { return r.Id == c.ParId; }, (r, dataList) =>
             {
                 r.Children ??= new List<SysMenu>();
                 r.Children.AddRange(dataList);

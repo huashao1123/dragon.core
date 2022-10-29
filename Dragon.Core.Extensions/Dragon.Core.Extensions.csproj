@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dragon.Core.Common\Dragon.Core.Common.csproj" />
     <ProjectReference Include="..\Dragon.Core.Data\Dragon.Core.Data.csproj" />
+    <ProjectReference Include="..\Dragon.Core.IService\Dragon.Core.IService.csproj" />
     <ProjectReference Include="..\Dragon.Core.ViewModel\Dragon.Core.ViewModel.csproj" />
   </ItemGroup>
 
