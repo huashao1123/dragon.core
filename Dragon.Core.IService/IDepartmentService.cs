@@ -17,5 +17,6 @@ namespace Dragon.Core.IService
         Task<SysDepartMent?> GetDeptByIdAsync(int id);
 
         Task<SysDepartMent?> UpdateAsync(SysDepartMent sysDepartMent);
+
     }
 }

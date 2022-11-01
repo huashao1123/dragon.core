@@ -14,13 +14,19 @@ namespace Dragon.Core.WebApi.Controllers
     public class RoleController : ControllerBase
     {
         readonly IRoleService _roleService;
+        readonly IUserRoleService _userRoleService;
         readonly ISysRoleMenuService _sysRoleMenuService;
         readonly ISysRoleDeptService _sysRoleDeptService;
-        public RoleController(IRoleService roleService, ISysRoleMenuService sysRoleMenuService, ISysRoleDeptService sysRoleDeptService)
+        readonly ISysUserService _sysUserService;
+        readonly IUser _user;
+        public RoleController(IRoleService roleService, ISysRoleMenuService sysRoleMenuService, ISysRoleDeptService sysRoleDeptService, IUserRoleService userRoleService, ISysUserService sysUserService, IUser user)
         {
             _roleService = roleService;
             _sysRoleMenuService = sysRoleMenuService;
             _sysRoleDeptService = sysRoleDeptService;
+            _userRoleService = userRoleService;
+            _sysUserService = sysUserService;
+            _user = user;
         }
         [HttpGet("/sysrole/pagerolelist")]
         public async Task<MessageModel<PageModel<SysRole>>> GetPageRoleListAsync([FromQuery] RolePageInput rolePageInput)
@@ -53,6 +59,7 @@ namespace Dragon.Core.WebApi.Controllers
             messageModel.result = await _roleService.UpdateRoleAsync(updateRoleInput);
             return messageModel;
         }
+        [Transaction]
         [HttpDelete("/sysrole/delete")]
         public async Task<MessageModel<bool>> DeleteRoleAsync([FromRoute]int id)
         {
@@ -61,8 +68,15 @@ namespace Dragon.Core.WebApi.Controllers
             var entity = await _roleService.FindAsync(d => d.Id == id);
             if (entity != null)
             {
+                if (entity.Code== CommonConst.SysAdminRoleCode)
+                {
+                    throw new UserFriendlyException("系统管理员禁止删除");
+                }
                 entity.IsDrop = true;
                 await _roleService.UpdateAsync(entity);
+                await _sysRoleDeptService.DeleteAsync(d=>d.RoleId==id);
+                await _sysRoleMenuService.DeleteAsync(d=>d.RoleId==id);
+                await _userRoleService.DeleteAsync(d => d.RoleId == id);
                 data.result = true;
             }
             return data;
@@ -81,6 +95,10 @@ namespace Dragon.Core.WebApi.Controllers
             var entity = await _roleService.FindAsync(d => d.Id == role.Id);
             if (entity != null)
             {
+                if (entity.Code == CommonConst.SysAdminRoleCode)
+                {
+                    throw new UserFriendlyException("系统管理员禁止修改");
+                }
                 entity.Status = (StateEnum)role.Status;
                 await _roleService.UpdateAsync(entity);
                 data.result = true;
@@ -136,10 +154,37 @@ namespace Dragon.Core.WebApi.Controllers
         [HttpPost("/sysrole/grantDept")]
         public async Task<MessageModel<bool>> GrantRoleDept(RoleDeptInput roleDeptInput)
         {
-            var role=await _roleService.GetEntityAsync(roleDeptInput.id);
-            role!.DataScope =(DataScopeEnum)roleDeptInput.DataScope;
+            var dataScope= (DataScopeEnum)roleDeptInput.DataScope;
+            if (!_user.IsSuperAdmin)
+            {
+                //这里需要先判断这个用户有没有数据权限操作
+                if (dataScope==DataScopeEnum.All)
+                {
+                    throw new UserFriendlyException("权限不够");
+                }
+
+                if (dataScope==DataScopeEnum.Define)
+                {
+                    var deptList = roleDeptInput.DeptIdList;
+                    if (deptList?.Count>0)
+                    {
+                        var userDeptList = await _sysUserService.GetDeptIdList();
+                        if (userDeptList.Count<1)
+                        {
+                            throw new UserFriendlyException("权限不够");
+                        }
+                        else if (!userDeptList.All(u=>deptList.Any(d=>d==u)))
+                        {
+                            throw new UserFriendlyException("权限不够");
+                        }
+
+                    }
+                    
+                }
+            }
+            var role =await _roleService.GetEntityAsync(roleDeptInput.id);
+            role!.DataScope = dataScope;
             await _roleService.UpdateAsync(role);
-            //这里需要先判断这个用户有没有数据权限
             var res= await _sysRoleDeptService.GrantRoleDept(roleDeptInput);
             var data = new MessageModel<bool>();
             data.result = res;

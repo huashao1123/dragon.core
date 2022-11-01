@@ -26,6 +26,7 @@ namespace Dragon.Core.Service
 
         public async Task<bool> AddRoleAsync(RoleInput role)
         {
+            await CheckRoleExist(role.Name, role.Code);
             var sysRole=_mapper.Map<SysRole>(role);
             sysRole.CreatedTime = DateTime.Now;
             sysRole.CreatedName =_user.Name;
@@ -60,12 +61,23 @@ namespace Dragon.Core.Service
 
         public async Task<bool> UpdateRoleAsync(UpdateRoleInput role)
         {
+            await CheckRoleExist(role.Name, role.Code,role.Id);
             var sysRole = _mapper.Map<SysRole>(role);
             sysRole.UpdateTime = DateTime.Now;
             sysRole.UpdateName = _user.Name;
             
             int count= await UpdateNotQueryAsync(sysRole,isIgnoreCol: true, properties: new Expression<Func<SysRole, object>>[] { d => d.CreatedName,d=>d.CreatedTime });
             return count > 0;
+        }
+
+        public async Task CheckRoleExist(string? roleName,string? code,int id=0)
+        {
+            var roleList=(await GetListAsync(r=>(r.Name==roleName || r.Code==code)&& r.IsDrop==false)).WhereIf(r=>r.Id==id,id>0).ToList();
+
+            if (roleList.Count>0)
+            {
+                throw new UserFriendlyException("角色已存在");
+            }
         }
     }
 }

@@ -4,7 +4,7 @@
     /// 事务特性
     /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
-    public class TransactionalAttribute : Attribute
+    public class TransactionAttribute : Attribute
     {
     }
 }

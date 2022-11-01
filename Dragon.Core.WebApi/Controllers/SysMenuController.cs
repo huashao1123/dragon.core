@@ -13,11 +13,13 @@ namespace Dragon.Core.WebApi.Controllers
         private readonly IUser _user;
         private readonly IUserRoleService _roleService;
         private readonly ISysMenuService _sysMenuService;
-        public SysMenuController(IUser user, IUserRoleService roleService, ISysMenuService sysMenuService)
+        private readonly ISysRoleMenuService _sysRoleMenuService;
+        public SysMenuController(IUser user, IUserRoleService roleService, ISysMenuService sysMenuService, ISysRoleMenuService sysRoleMenuService)
         {
             _user = user;
             _roleService = roleService;
             _sysMenuService = sysMenuService;
+            _sysRoleMenuService = sysRoleMenuService;
         }
         /// <summary>
         /// 获取按钮权限(登录)
@@ -108,6 +110,7 @@ namespace Dragon.Core.WebApi.Controllers
                 entity.IsDrop = true;
                 await _sysMenuService.UpdateAsync(entity);
                 data.result = true;
+                await _sysRoleMenuService.DeleteAsync(d => d.MenuId == id);
             }
             return data;
         }

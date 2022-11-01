@@ -29,6 +29,13 @@ namespace Dragon.Core.Service
 
         public async Task<bool> AddMenuAsync(MenuInput menuInput)
         {
+            CheckMenuParam(menuInput);
+            var menuList= menuInput.menuType==(int)MenuTypeEnum.Btn ?await _baseRepository.GetListAsync(d=>d.IsDrop==false&& d.Permission==menuInput.permission): await _baseRepository.GetListAsync(d => d.IsDrop == false && d.Title==menuInput.title);
+            if (menuList.Count>0)
+            {
+                throw new UserFriendlyException("数据重复");
+            }
+
             var sysMenu=_mapper.Map<SysMenu>(menuInput);
             sysMenu.Name ??= "";
             sysMenu.path ??= "";
@@ -112,10 +119,32 @@ namespace Dragon.Core.Service
 
         public async Task<bool> UpdateMenuAsync(MenuInput menuInput)
         {
+            CheckMenuParam(menuInput);
+            var menuList = menuInput.menuType == (int)MenuTypeEnum.Btn ? await _baseRepository.GetListAsync(d => d.IsDrop == false && d.Permission == menuInput.permission && d.Id!=menuInput.id) : await _baseRepository.GetListAsync(d => d.IsDrop == false && d.Title == menuInput.title && d.Id != menuInput.id);
+            if (menuList.Count > 0)
+            {
+                throw new UserFriendlyException("数据重复");
+            }
             var sysMenu = _mapper.Map<SysMenu>(menuInput);
             sysMenu.UpdateTime=DateTime.Now;
             await UpdateAsync(sysMenu);
             return true;
+        }
+
+        private void CheckMenuParam(MenuInput menuInput)
+        {
+            if (menuInput.menuType==(int)MenuTypeEnum.Btn)
+            {
+                string? permission = menuInput.permission;
+                if (string.IsNullOrWhiteSpace(permission))
+                {
+                    throw new UserFriendlyException("权限标识为空");
+                }
+                else if (!permission.Contains(":"))
+                {
+                    throw new UserFriendlyException("权限标识格式错误");
+                }
+            }
         }
     }
 }

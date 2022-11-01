@@ -12,5 +12,10 @@ namespace Dragon.Core.IService
         Task<bool> GrantUserDeptAsync(UserDeptInput userDeptInput);
 
         Task<List<int>> OwnDeptIdListAsync(int userId);
+
+        Task CheckDataScope(int deptId);
+        Task DeleteDeptByUserId(int userId);
+
+        Task<List<int>> GetDeptIdList();
     }
 }

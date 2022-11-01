@@ -18,12 +18,14 @@ namespace Dragon.Core.Service
         readonly IMapper _mapper;
         readonly IBaseRepository<SysRole> _roleRepository;
         readonly IBaseRepository<ApiModule> _apiModuleRepository;
-        public SysRoleMenuService(IBaseRepository<SysRoleMenuModule> baseRepository, IBaseRepository<SysMenu> menuRepository,IMapper mapper, IBaseRepository<SysRole> roleRepository, IBaseRepository<ApiModule> apiModuleRepository) : base(baseRepository)
+        readonly IUser _user;
+        public SysRoleMenuService(IBaseRepository<SysRoleMenuModule> baseRepository, IBaseRepository<SysMenu> menuRepository,IMapper mapper, IBaseRepository<SysRole> roleRepository, IBaseRepository<ApiModule> apiModuleRepository, IUser user) : base(baseRepository)
         {
             _menuRepository = menuRepository;
             _mapper = mapper;
             _roleRepository = roleRepository;
             _apiModuleRepository = apiModuleRepository;
+            _user = user;
         }
 
         public async Task<List<MenuListItem>> GetMenuList(int roleId)
@@ -42,6 +44,15 @@ namespace Dragon.Core.Service
 
         public async Task<bool> GrantMenu(RoleMenuInPut roleMenuInPut)
         {
+            
+            if (!_user.IsSuperAdmin)
+            {
+                var role =await _roleRepository.GetEntityAsync(roleMenuInPut.Id);
+                if (role!=null && role.Code==CommonConst.SysAdminRoleCode)
+                {
+                    throw new UserFriendlyException("系统管理员角色禁止分配菜单");
+                }
+            }
             await DeleteAsync(d => d.RoleId == roleMenuInPut.Id);
             var menuList=await _menuRepository.GetListAsync();
             var menus = roleMenuInPut.MenuIdList.Select(u => new SysRoleMenuModule

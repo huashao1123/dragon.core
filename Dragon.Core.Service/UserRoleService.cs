@@ -5,30 +5,37 @@ using Dragon.Core.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Dragon.Core.Service
 {
-    public class UserRoleService : BaseService<SysUserRole>, IUserRoleService
+    public class UserRoleService :IUserRoleService
     {
         private readonly IBaseRepository<SysRole> _sysRoleRepository;
-        public UserRoleService(IBaseRepository<SysRole> sysRoleRepository, IBaseRepository<SysUserRole> baseRepository) : base(baseRepository)
+        private readonly IUserRoleRepository _userRoleRepository;
+        public UserRoleService(IBaseRepository<SysRole> sysRoleRepository,IUserRoleRepository userRoleRepository) 
         {
             _sysRoleRepository = sysRoleRepository;
+            _userRoleRepository = userRoleRepository;
+        }
+
+        public async Task DeleteAsync(Expression<Func<SysUserRole, bool>> predicate, bool autoSave = true, CancellationToken cancellationToken = default)
+        {
+            await _userRoleRepository.DeleteAsync(predicate, autoSave, cancellationToken);
         }
 
         public async Task<List<int>> GetRoleId(int userId)
         {
-            var userRoles = await GetListAsync(d => d.UserId == userId);
-            List<int> roleIds = userRoles.Select(d => d.RoleId).ToList();
+            List<int> roleIds =await _userRoleRepository.GetRoleIdListAsync(userId);
             return roleIds;
         }
 
         public async Task<List<RoleInfo>> GetRoleInfoList(int userId)
         {
             List<RoleInfo> roleInfoList = new List<RoleInfo>();
-            var userRoles = await GetListAsync(d => d.UserId == userId);
+            var userRoles = await _userRoleRepository.GetListAsync(d => d.UserId == userId);
             var rolelist = await _sysRoleRepository.GetListAsync();
             if (userRoles.Count > 0)
             {
@@ -47,7 +54,7 @@ namespace Dragon.Core.Service
         public async Task<string> GetUserRoleNames(int userId)
         {
             string roleNames = "";
-            var userRoles = await GetListAsync(d => d.UserId == userId);
+            var userRoles = await _userRoleRepository.GetListAsync(d => d.UserId == userId);
             var rolelist = await _sysRoleRepository.GetListAsync();
             if (userRoles.Count > 0)
             {
@@ -60,16 +67,14 @@ namespace Dragon.Core.Service
 
         public async Task<bool> GrantRole(UserRoleInput userRoleInput)
         {
-            await DeleteAsync(d=>d.UserId==userRoleInput.Id);
+            await _userRoleRepository.DeleteAsync(d=>d.UserId==userRoleInput.Id);
             var data = userRoleInput.RoleIdList.Select(u => new SysUserRole
             {
                 UserId = userRoleInput.Id,
                 RoleId = u
             }).ToList();
-            await InsertManyAsync(data);
+            await _userRoleRepository.InsertManyAsync(data);
             return true;
         }
-
-       
     }
 }

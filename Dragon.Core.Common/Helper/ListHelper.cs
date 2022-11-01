@@ -188,7 +188,7 @@ namespace Dragon.Core.Common
         /// <param name="pageIndex">1为起始页</param>
         /// <param name="pageSize"></param>
         /// <param name="cancellationToken"></param>
-        public static async Task<List<T>> ToListAsync<T>(
+        public static async Task<List<T>> ToPageListAsync<T>(
             this IQueryable<T> query,
             int pageIndex = 1,
             int pageSize = 10,

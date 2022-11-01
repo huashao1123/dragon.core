@@ -47,6 +47,7 @@ namespace Dragon.Core.ViewModel
     public class UserDeptInput
     {
         public int Id { get; set; }
+        public int DeptId { get; set; }
         public List<int>? DeptIdList { get; set; }
     }
 

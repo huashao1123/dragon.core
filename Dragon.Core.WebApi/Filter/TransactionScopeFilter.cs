@@ -17,7 +17,7 @@ namespace Dragon.Core.WebApi.Filter
             {
                 var actionDesc = (ControllerActionDescriptor)context.ActionDescriptor;
                 transactionalAttribute = actionDesc.MethodInfo
-                    .IsDefined(typeof(TransactionalAttribute));//当方法上面有这个事务过滤器，就采用事务
+                    .IsDefined(typeof(TransactionAttribute));//当方法上面有这个事务过滤器，就采用事务
             }
             if (!transactionalAttribute)
             {

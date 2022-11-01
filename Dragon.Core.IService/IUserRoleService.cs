@@ -1,6 +1,8 @@
-﻿namespace Dragon.Core.IService
+﻿using System.Linq.Expressions;
+
+namespace Dragon.Core.IService
 {
-    public interface IUserRoleService:IBaseService<SysUserRole>
+    public interface IUserRoleService
     {
         /// <summary>
         /// 得到角色名，以,分割
@@ -22,5 +24,7 @@
         public Task<List<int>>GetRoleId(int userId);
 
         public Task<bool> GrantRole(UserRoleInput userRoleInput);
+
+        public Task DeleteAsync(Expression<Func<SysUserRole, bool>> predicate, bool autoSave = true, CancellationToken cancellationToken = default);
     }
 }

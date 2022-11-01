@@ -10,5 +10,7 @@ namespace Dragon.Core.IRepository
     public interface IDepartMentRepository:IBaseRepository<SysDepartMent>
     {
         Task<List<int>> GetChildDeptIdListWithSelfById(int pid);
+
+        Task<List<int>> GetDeptIdListByDataScope(int dataScope, int deptId);
     }
 }
