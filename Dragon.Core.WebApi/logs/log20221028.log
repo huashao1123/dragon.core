@@ -1,0 +1,352 @@
+2022-10-28 11:11:49.151 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 11:11:49.403 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-10-28 11:11:49.798 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-10-28 11:11:49.811 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-10-28 11:11:49.815 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-10-28 11:11:49.820 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-10-28 11:11:50.174 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-28 11:11:50.374 +08:00 [INF] Now listening on: http://[::]:5135
+2022-10-28 11:11:50.377 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-28 11:11:50.379 +08:00 [INF] Hosting environment: Development
+2022-10-28 11:11:50.380 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\
+2022-10-28 11:11:51.664 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-10-28 11:11:52.032 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 11:11:52.040 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 8.6567ms
+2022-10-28 11:11:52.042 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 384.2297ms
+2022-10-28 11:11:52.051 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_vs/browserLink - -
+2022-10-28 11:11:52.159 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 108.5255ms
+2022-10-28 11:11:52.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-10-28 11:11:52.443 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 235.0515ms
+2022-10-28 11:12:23.161 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48
+2022-10-28 11:12:23.215 +08:00 [INF] CORS policy execution successful.
+2022-10-28 11:12:23.293 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 11:12:23.316 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-10-28 11:13:06.573 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 11:13:06.732 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-10-28 11:13:07.026 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-10-28 11:13:07.037 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-10-28 11:13:07.040 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-10-28 11:13:07.044 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-10-28 11:13:07.110 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-28 11:13:07.254 +08:00 [INF] Now listening on: http://[::]:5135
+2022-10-28 11:13:07.257 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-28 11:13:07.258 +08:00 [INF] Hosting environment: Development
+2022-10-28 11:13:07.259 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\
+2022-10-28 11:13:08.077 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-10-28 11:13:08.396 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_vs/browserLink - -
+2022-10-28 11:13:08.408 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 335.6940ms
+2022-10-28 11:13:08.419 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 11:13:08.424 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 5.1006ms
+2022-10-28 11:13:08.430 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.9159ms
+2022-10-28 11:13:08.493 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-10-28 11:13:08.688 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 195.2832ms
+2022-10-28 11:13:46.798 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48
+2022-10-28 11:13:46.847 +08:00 [INF] CORS policy execution successful.
+2022-10-28 11:13:46.907 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 11:13:46.930 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-10-28 11:13:57.965 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 11:13:58.120 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-10-28 11:14:02.072 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 11:14:02.094 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-10-28 14:14:10.090 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:14:10.248 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-10-28 14:14:10.547 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-10-28 14:14:10.556 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-10-28 14:14:10.559 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-10-28 14:14:10.562 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-10-28 14:14:10.629 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-28 14:14:10.795 +08:00 [INF] Now listening on: http://[::]:5135
+2022-10-28 14:14:10.798 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-28 14:14:10.799 +08:00 [INF] Hosting environment: Development
+2022-10-28 14:14:10.800 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\
+2022-10-28 14:14:11.450 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-10-28 14:14:11.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 14:14:11.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_vs/browserLink - -
+2022-10-28 14:14:11.777 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 5.3905ms
+2022-10-28 14:14:11.782 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 334.6582ms
+2022-10-28 14:14:11.838 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.6495ms
+2022-10-28 14:14:11.883 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-10-28 14:14:12.082 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 197.9925ms
+2022-10-28 14:14:36.789 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48
+2022-10-28 14:14:36.836 +08:00 [INF] CORS policy execution successful.
+2022-10-28 14:14:36.915 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 14:14:36.950 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-10-28 14:14:40.116 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:14:40.255 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-10-28 14:14:40.402 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:14:40.424 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-10-28 14:14:40.566 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.TokenInfoViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-28 14:14:40.615 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi) in 3651.5321ms
+2022-10-28 14:14:40.618 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 14:14:40.628 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48 - 200 658 application/json;+charset=utf-8 3833.9203ms
+2022-10-28 14:15:20.967 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getUserInfo - -
+2022-10-28 14:15:21.049 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo (Dragon.Core.WebApi)'
+2022-10-28 14:15:21.053 +08:00 [INF] Route matched with {action = "GetUserInfo", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.UserInfoModel]] GetUserInfo() on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-10-28 14:15:21.096 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:15:21.104 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE "s"."Id" = @__id_0
+LIMIT 2
+2022-10-28 14:15:21.111 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:15:21.114 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-10-28 14:15:21.118 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.UserInfoModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-28 14:15:21.130 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo (Dragon.Core.WebApi) in 74.5889ms
+2022-10-28 14:15:21.132 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo (Dragon.Core.WebApi)'
+2022-10-28 14:15:21.133 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getUserInfo - - - 200 177 application/json;+charset=utf-8 167.2799ms
+2022-10-28 14:15:55.621 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getPermCode - -
+2022-10-28 14:15:55.626 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi)'
+2022-10-28 14:15:55.629 +08:00 [INF] Route matched with {action = "GetPermCode", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[System.String]]] GetPermCode() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-10-28 14:16:01.503 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:16:01.506 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:16:06.536 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-10-28 14:16:16.333 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" = 3)
+2022-10-28 14:16:29.943 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-10-28 14:16:29.948 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi) in 34285.7802ms
+2022-10-28 14:16:29.949 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi)'
+2022-10-28 14:16:29.951 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getPermCode - - - 200 503 application/json;+charset=utf-8 34299.3372ms
+2022-10-28 14:17:03.170 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getMenuList - -
+2022-10-28 14:17:03.173 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-10-28 14:17:03.176 +08:00 [INF] Route matched with {action = "GetLoginMenuTree", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.MenuTreeViewModel]]] GetLoginMenuTree() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-10-28 14:17:03.180 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:17:03.182 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:17:03.190 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" <> 3)
+2022-10-28 14:17:03.192 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-10-28 14:17:03.229 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.MenuTreeViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-10-28 14:17:03.239 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi) in 60.1708ms
+2022-10-28 14:17:03.241 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-10-28 14:17:03.242 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getMenuList - - - 200 4202 application/json;+charset=utf-8 75.3138ms
+2022-10-28 14:18:11.813 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getMenuList - -
+2022-10-28 14:18:11.818 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-10-28 14:18:11.819 +08:00 [INF] Route matched with {action = "GetLoginMenuTree", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.MenuTreeViewModel]]] GetLoginMenuTree() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-10-28 14:18:11.826 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:18:11.828 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:18:20.987 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" <> 3)
+2022-10-28 14:18:21.781 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-10-28 14:18:49.127 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.MenuTreeViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-10-28 14:18:49.130 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi) in 37271.3565ms
+2022-10-28 14:18:49.132 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-10-28 14:18:49.133 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getMenuList - - - 200 4202 application/json;+charset=utf-8 37286.8101ms
+2022-10-28 14:19:21.824 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getMenuList - -
+2022-10-28 14:19:21.825 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-10-28 14:19:21.827 +08:00 [INF] Route matched with {action = "GetLoginMenuTree", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.MenuTreeViewModel]]] GetLoginMenuTree() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-10-28 14:19:21.830 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:19:21.832 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:19:23.349 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" <> 3)
+2022-10-28 14:19:23.353 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-10-28 14:20:53.818 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:20:53.948 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-10-28 14:20:54.234 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-10-28 14:20:54.244 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-10-28 14:20:54.247 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-10-28 14:20:54.250 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-10-28 14:20:54.302 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-28 14:20:54.411 +08:00 [INF] Now listening on: http://[::]:5135
+2022-10-28 14:20:54.415 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-28 14:20:54.416 +08:00 [INF] Hosting environment: Development
+2022-10-28 14:20:54.417 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\
+2022-10-28 14:20:54.995 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-10-28 14:20:55.272 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_vs/browserLink - -
+2022-10-28 14:20:55.272 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 14:20:55.283 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 7.1336ms
+2022-10-28 14:20:55.284 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 291.7877ms
+2022-10-28 14:20:55.311 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.5925ms
+2022-10-28 14:20:55.368 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-10-28 14:20:55.558 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 190.1830ms
+2022-10-28 14:21:15.414 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48
+2022-10-28 14:21:15.458 +08:00 [INF] CORS policy execution successful.
+2022-10-28 14:21:15.506 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 14:21:15.527 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-10-28 14:21:24.210 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:21:24.340 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-10-28 14:21:25.669 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:21:25.690 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-10-28 14:28:05.225 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:28:05.372 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-10-28 14:28:05.680 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-10-28 14:28:05.689 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-10-28 14:28:05.692 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-10-28 14:28:05.697 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-10-28 14:28:05.756 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-28 14:28:05.879 +08:00 [INF] Now listening on: http://[::]:5135
+2022-10-28 14:28:05.883 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-28 14:28:05.884 +08:00 [INF] Hosting environment: Development
+2022-10-28 14:28:05.887 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\
+2022-10-28 14:28:06.723 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-10-28 14:28:07.001 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 14:28:07.007 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 4.8875ms
+2022-10-28 14:28:07.008 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 289.9108ms
+2022-10-28 14:28:07.017 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_vs/browserLink - -
+2022-10-28 14:28:07.053 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.5203ms
+2022-10-28 14:28:07.115 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-10-28 14:28:07.305 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 189.9354ms
+2022-10-28 14:28:26.661 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48
+2022-10-28 14:28:26.701 +08:00 [INF] CORS policy execution successful.
+2022-10-28 14:28:26.749 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 14:28:26.768 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-10-28 14:28:29.670 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:28:29.801 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-10-28 14:28:29.913 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:28:29.934 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-10-28 14:28:30.086 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.TokenInfoViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-28 14:28:30.132 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi) in 3356.0857ms
+2022-10-28 14:28:30.135 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-10-28 14:28:30.152 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5135/login application/json-patch+json 48 - 200 658 application/json;+charset=utf-8 3490.3066ms
+2022-10-28 14:29:54.499 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getPermCode - -
+2022-10-28 14:29:54.578 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi)'
+2022-10-28 14:29:54.582 +08:00 [INF] Route matched with {action = "GetPermCode", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[System.String]]] GetPermCode() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-10-28 14:30:25.374 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-10-28 14:30:25.380 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-10-28 14:30:31.781 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-10-28 14:32:00.684 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" = 3)
