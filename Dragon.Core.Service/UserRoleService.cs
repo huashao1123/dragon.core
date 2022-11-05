@@ -73,7 +73,7 @@ namespace Dragon.Core.Service
                 UserId = userRoleInput.Id,
                 RoleId = u
             }).ToList();
-            await _userRoleRepository.InsertManyAsync(data);
+            await _userRoleRepository.InsertManyAsync(data,true);
             return true;
         }
     }

@@ -9,7 +9,7 @@
             是否忽略统一返回格式
             </summary>
         </member>
-        <member name="T:Dragon.Core.WebApi.TransactionalAttribute">
+        <member name="T:Dragon.Core.WebApi.TransactionAttribute">
             <summary>
             事务特性
             </summary>
@@ -129,6 +129,13 @@
             删除菜单
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.UserController.CheckDataScope(System.Int32)">
+            <summary>
+            检查是否有部门权限
+            </summary>
+            <param name="deptId"></param>
             <returns></returns>
         </member>
         <member name="T:Dragon.Core.WebApi.Filter.ApiResultFilter">

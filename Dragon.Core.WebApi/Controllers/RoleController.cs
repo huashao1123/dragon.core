@@ -35,6 +35,7 @@ namespace Dragon.Core.WebApi.Controllers
             messageModel.result= await _roleService.GetPageRoleListAsync(rolePageInput);
             return messageModel;
         }
+        [AllowAnonymous]
         [HttpGet("/sysrole/list")]
         public async Task<List<RoleInfo>>GetRoleListAsync()
         {

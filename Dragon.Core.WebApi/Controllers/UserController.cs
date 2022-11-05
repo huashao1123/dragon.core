@@ -10,7 +10,6 @@ namespace Dragon.Core.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Permissions.Name)]
     public class UserController : ControllerBase
     {
         readonly ISysUserService _userService;
@@ -22,6 +21,7 @@ namespace Dragon.Core.WebApi.Controllers
             _userRoleService = userRoleService;
             _user = user;
         }
+        [Authorize(Permissions.Name)]
         [HttpGet("/sysuser/pagelist")]
         public async Task<MessageModel<PageModel<UserViewModel>>> GetUserPageListAsync([FromQuery] UserPageInput userPageInput)
         {
@@ -30,7 +30,7 @@ namespace Dragon.Core.WebApi.Controllers
             messageModel.result = userPageList;
             return messageModel;
         }
-
+        [Authorize(Permissions.Name)]
         [HttpPost("/sysuser/add")]
         public async Task<MessageModel<bool>> AddSysUserAsync(UserInput userInput)
         {
@@ -41,7 +41,7 @@ namespace Dragon.Core.WebApi.Controllers
             data.result = res;
             return data;
         }
-
+        [Authorize(Permissions.Name)]
         [HttpPut("/sysuser/update")]
         public async Task<MessageModel<bool>>UpdateSysUserAsync(UserInput userInput)
         {
@@ -51,6 +51,7 @@ namespace Dragon.Core.WebApi.Controllers
             data.result = res;
             return data;
         }
+        [Authorize(Permissions.Name)]
         [Transaction]
         [HttpDelete("/sysuser/delete/{id}")]
         public async Task<MessageModel<bool>>DeleteSysUserAsync(int id)
@@ -78,7 +79,7 @@ namespace Dragon.Core.WebApi.Controllers
             }
             return data;
         }
-
+        [Authorize(Permissions.Name)]
         [HttpPost("/sysuser/setstatus")]
         public async Task<MessageModel<bool>>SetUserStatusAsync(UserStatus userStatus)
         {
@@ -108,7 +109,7 @@ namespace Dragon.Core.WebApi.Controllers
             }
             return data;
         }
-
+        [Authorize(Permissions.Name)]
         [HttpPost("/sysuser/grantrole")]
         public async Task<MessageModel<bool>> GrantUserRoleAsync(UserRoleInput userRoleInput)
         {
@@ -123,7 +124,7 @@ namespace Dragon.Core.WebApi.Controllers
             data.result = res;
             return data;
         }
-
+        [Authorize(Permissions.Name)]
         [HttpPost("/sysuser/grantdept")]
         public async Task<MessageModel<bool>> GrantUserDept(UserDeptInput userDeptInput)
         {
@@ -134,7 +135,7 @@ namespace Dragon.Core.WebApi.Controllers
             data.result = res;
             return data;
         }
-
+        [Authorize]
         [HttpGet("/sysuser/ownrolelist")]
         public async Task<MessageModel<List<int>>>GetOwnUserRoleListAsync(int userId)
         {
@@ -143,7 +144,7 @@ namespace Dragon.Core.WebApi.Controllers
             data.result= roleIdList;
             return data;
         }
-
+        [Authorize]
         [HttpGet("/sysuser/owndeptidlist")]
         public async Task<MessageModel<List<int>>>GetOwnUserDeptList(int userId)
         {

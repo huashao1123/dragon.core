@@ -16,14 +16,16 @@ namespace Dragon.Core.WebApi.Controllers
         private readonly ISysUserService _sysUserService;
         private readonly IUserRoleService _userRoleService;
         private readonly PermissionRequirement _requirement;
+        private readonly ISysMenuService _sysMenuService;
         private readonly IUser _user;
 
-        public AuthController(ISysUserService sysUserService, IUserRoleService userRoleService, PermissionRequirement requirement, IUser user)
+        public AuthController(ISysUserService sysUserService, IUserRoleService userRoleService, PermissionRequirement requirement, IUser user, ISysMenuService sysMenuService)
         {
             _sysUserService = sysUserService;
             _userRoleService = userRoleService;
             _requirement = requirement;
             _user = user;
+            _sysMenuService = sysMenuService;
         }
         /// <summary>
         /// 登录接口
@@ -76,6 +78,8 @@ namespace Dragon.Core.WebApi.Controllers
             var data = new MessageModel<UserInfoModel>();
             var user = await _sysUserService.FindAsync(d=>d.Id==id);
             var roleList = await _userRoleService.GetRoleInfoList(id);
+            var menuList= await _sysMenuService.GetTreeMenuList(roleList.Select(d=>d.Id).ToList());
+            string? homePath=menuList.Select(d=>d.path).FirstOrDefault();
             UserInfoModel userInfoModel = new UserInfoModel
             {
                 avatar = user?.Avater,
@@ -83,6 +87,7 @@ namespace Dragon.Core.WebApi.Controllers
                 Username = _user.Name,
                 RealName = user!.Account,
                 Desc = user.JobName,
+                homePath = homePath,
                 roles = roleList.Select(r => new LoginRole { RoleName = r.Name,Value=r.Code }).ToList(),
             };
             data.result = userInfoModel;

@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Dragon.Core.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize(Permissions.Name)]
     [ApiController]
     public class SysMenuController : ControllerBase
     {
@@ -44,7 +43,7 @@ namespace Dragon.Core.WebApi.Controllers
         public async Task<MessageModel<List<MenuTreeViewModel>>> GetLoginMenuTree()
         {
             int userId = Convert.ToInt32(_user.ID);
-            List<int> roleIds = await _roleService.GetRoleId(userId);//到时根据角色来显示菜单
+            List<int> roleIds = await _roleService.GetRoleId(userId);//根据角色来显示菜单
             var model = new MessageModel<List<MenuTreeViewModel>>();
             model.result = await _sysMenuService.GetTreeMenuList(roleIds);
             return model;
@@ -55,6 +54,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// </summary>
         /// <param name="menuParams"></param>
         /// <returns></returns>
+        [Authorize(Permissions.Name)]
         [HttpGet("/sysMenu/list")]
         public async Task<MessageModel<List<MenuListItem>>> MenuListAsync([FromQuery] MenuParams menuParams)
         {
@@ -71,6 +71,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost("/sysMenu/add")]
+        [Authorize(Permissions.Name)]
         public async Task<MessageModel<bool>> AddMenuAsync(MenuInput input)
         {
             var data = new MessageModel<bool>();
@@ -86,6 +87,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPut("/sysMenu/update")]
+        [Authorize(Permissions.Name)]
         public async Task<MessageModel<bool>> UpdateMenuAsync(MenuInput input)
         {
             var data = new MessageModel<bool>();
@@ -100,6 +102,7 @@ namespace Dragon.Core.WebApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("/sysMenu/delete/{id}")]
+        [Authorize(Permissions.Name)]
         public async Task<MessageModel<bool>> DeleteMenuAsync(int id)
         {
             var data = new MessageModel<bool>();
