@@ -1,0 +1,240 @@
+2022-11-05 12:26:14.684 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:26:14.898 +08:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-11-05 12:26:15.355 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUser" AS "s")
+2022-11-05 12:26:15.366 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysRole" AS "s")
+2022-11-05 12:26:15.370 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysUserRole" AS "s")
+2022-11-05 12:26:15.375 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SysMenu" AS "s")
+2022-11-05 12:26:15.513 +08:00 [INF] User profile is available. Using 'C:\Users\longhaihua\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-05 12:26:15.707 +08:00 [INF] Now listening on: http://[::]:5135
+2022-11-05 12:26:15.711 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-05 12:26:15.712 +08:00 [INF] Hosting environment: Development
+2022-11-05 12:26:15.713 +08:00 [INF] Content root path: C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.WebApi\
+2022-11-05 12:26:17.226 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/index.html - -
+2022-11-05 12:26:17.459 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/index.html - - - 200 - text/html;charset=utf-8 235.0390ms
+2022-11-05 12:26:17.476 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - -
+2022-11-05 12:26:17.481 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 5.0959ms
+2022-11-05 12:26:17.551 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - -
+2022-11-05 12:26:17.787 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/swagger/V1/swagger.json - - - 200 - application/json;charset=utf-8 236.4141ms
+2022-11-05 12:27:31.586 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 39
+2022-11-05 12:27:31.655 +08:00 [INF] CORS policy execution successful.
+2022-11-05 12:27:31.752 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:27:31.776 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-11-05 12:27:32.000 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:27:32.173 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-11-05 12:27:32.192 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.TokenInfoViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:27:32.240 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi) in 453.0684ms
+2022-11-05 12:27:32.243 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:27:32.252 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 39 - 200 68 application/json;+charset=utf-8 666.6512ms
+2022-11-05 12:27:52.264 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 39
+2022-11-05 12:27:52.267 +08:00 [INF] CORS policy execution successful.
+2022-11-05 12:27:52.268 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:27:52.269 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-11-05 12:27:52.309 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:27:52.316 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-11-05 12:27:52.319 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.TokenInfoViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:27:52.321 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi) in 49.5656ms
+2022-11-05 12:27:52.331 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:27:52.332 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 39 - 200 68 application/json;+charset=utf-8 69.8086ms
+2022-11-05 12:28:45.403 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 39
+2022-11-05 12:28:45.405 +08:00 [INF] CORS policy execution successful.
+2022-11-05 12:28:45.411 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:28:45.413 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-11-05 12:28:45.417 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:28:45.420 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-11-05 12:28:45.424 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.TokenInfoViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:28:45.426 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi) in 9.6869ms
+2022-11-05 12:28:45.435 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:28:45.437 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 39 - 200 68 application/json;+charset=utf-8 33.6137ms
+2022-11-05 12:28:53.566 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 41
+2022-11-05 12:28:53.569 +08:00 [INF] CORS policy execution successful.
+2022-11-05 12:28:53.570 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:28:53.572 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.TokenInfoViewModel]] Login(Dragon.Core.ViewModel.LoginInput) on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-11-05 12:28:53.575 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:28:53.579 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 4), @__password_1='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE ("s"."Name" = @__userName_0) AND ("s"."Password" = @__password_1)
+LIMIT 2
+2022-11-05 12:28:53.697 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-11-05 12:28:53.719 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-11-05 12:28:53.865 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.TokenInfoViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:28:53.870 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi) in 295.7342ms
+2022-11-05 12:28:53.876 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.Login (Dragon.Core.WebApi)'
+2022-11-05 12:28:53.877 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5135/login application/json;charset=UTF-8 41 - 200 693 application/json;+charset=utf-8 311.5595ms
+2022-11-05 12:28:53.878 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getUserInfo - -
+2022-11-05 12:28:53.956 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo (Dragon.Core.WebApi)'
+2022-11-05 12:28:53.960 +08:00 [INF] Route matched with {action = "GetUserInfo", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.ViewModel.UserInfoModel]] GetUserInfo() on controller Dragon.Core.WebApi.Controllers.AuthController (Dragon.Core.WebApi).
+2022-11-05 12:28:53.967 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:28:53.973 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE "s"."Id" = @__id_0
+LIMIT 2
+2022-11-05 12:28:53.977 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-11-05 12:28:53.980 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DataScope", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRole" AS "s"
+2022-11-05 12:28:53.999 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" <> 3)
+2022-11-05 12:28:54.068 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-11-05 12:28:54.122 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.ViewModel.UserInfoModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:28:54.134 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo (Dragon.Core.WebApi) in 170.9483ms
+2022-11-05 12:28:54.138 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.AuthController.GetUserInfo (Dragon.Core.WebApi)'
+2022-11-05 12:28:54.139 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getUserInfo - - - 200 201 application/json;+charset=utf-8 261.3435ms
+2022-11-05 12:28:54.144 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getPermCode - -
+2022-11-05 12:28:54.146 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi)'
+2022-11-05 12:28:54.148 +08:00 [INF] Route matched with {action = "GetPermCode", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[System.String]]] GetPermCode() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-11-05 12:28:54.152 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:28:54.154 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-11-05 12:28:54.158 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-11-05 12:28:54.163 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" = 3)
+2022-11-05 12:28:54.166 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:28:54.169 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi) in 19.1427ms
+2022-11-05 12:28:54.171 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode (Dragon.Core.WebApi)'
+2022-11-05 12:28:54.172 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getPermCode - - - 200 503 application/json;+charset=utf-8 28.4522ms
+2022-11-05 12:28:54.174 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getMenuList - -
+2022-11-05 12:28:54.176 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-11-05 12:28:54.178 +08:00 [INF] Route matched with {action = "GetLoginMenuTree", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.MenuTreeViewModel]]] GetLoginMenuTree() on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-11-05 12:28:54.182 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:28:54.185 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserId"
+FROM "SysUserRole" AS "s"
+WHERE "s"."UserId" = @__userId_0
+2022-11-05 12:28:54.189 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Component", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."CurrentActiveMenu", "s"."FrameSrc", "s"."HideMenu", "s"."Icon", "s"."IgnoreKeepAlive", "s"."IsDrop", "s"."MenuType", "s"."Mid", "s"."Name", "s"."Order", "s"."ParId", "s"."Permission", "s"."Redirect", "s"."Remark", "s"."Status", "s"."Title", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."path"
+FROM "SysMenu" AS "s"
+WHERE ("s"."IsDrop" = 0) AND ("s"."MenuType" <> 3)
+2022-11-05 12:28:54.192 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."MenuId", "s"."Mid", "s"."Order", "s"."Remark", "s"."RoleId", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysRoleMenuModule" AS "s"
+WHERE "s"."RoleId" = 2
+2022-11-05 12:28:54.195 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.MenuTreeViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:28:54.204 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi) in 23.4606ms
+2022-11-05 12:28:54.206 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.GetLoginMenuTree (Dragon.Core.WebApi)'
+2022-11-05 12:28:54.207 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getMenuList - - - 200 5136 application/json;+charset=utf-8 33.0604ms
+2022-11-05 12:29:13.555 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/dept/list - -
+2022-11-05 12:29:13.561 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi)'
+2022-11-05 12:29:13.567 +08:00 [INF] Route matched with {action = "GetDeptList", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.DepartmentViewModel]]] GetDeptList(Dragon.Core.ViewModel.DepartmentParams) on controller Dragon.Core.WebApi.Controllers.DepartmentController (Dragon.Core.WebApi).
+2022-11-05 12:29:13.577 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:29:13.584 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Code", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."IsDrop", "s"."Name", "s"."Order", "s"."Pid", "s"."Remark", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime"
+FROM "SysDepartMent" AS "s"
+WHERE "s"."IsDrop" = 0
+2022-11-05 12:29:13.593 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/sysuser/pagelist?page=1&pageSize=10 - -
+2022-11-05 12:29:13.595 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.UserController.GetUserPageListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:13.599 +08:00 [INF] Route matched with {action = "GetUserPageList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.Common.PageModel`1[Dragon.Core.ViewModel.UserViewModel]]] GetUserPageListAsync(Dragon.Core.ViewModel.UserPageInput) on controller Dragon.Core.WebApi.Controllers.UserController (Dragon.Core.WebApi).
+2022-11-05 12:29:13.610 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:29:13.613 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.DepartmentViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:29:13.619 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi) in 49.6943ms
+2022-11-05 12:29:13.622 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi)'
+2022-11-05 12:29:13.625 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/dept/list - - - 200 469 application/json;+charset=utf-8 70.4742ms
+2022-11-05 12:29:13.635 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "SysUser" AS "s"
+WHERE "s"."IsDrop" = 0
+2022-11-05 12:29:13.642 +08:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-05 12:29:13.644 +08:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-11-05 12:29:13.649 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."Account", "s"."Avater", "s"."CreatedId", "s"."CreatedName", "s"."CreatedTime", "s"."DepartmentId", "s"."Email", "s"."EmpliyeeType", "s"."ErrorCount", "s"."HistroyPsw", "s"."IsDrop", "s"."JobName", "s"."JobStatus", "s"."LastErrTime", "s"."Mobile", "s"."Name", "s"."Order", "s"."Password", "s"."PosId", "s"."Remark", "s"."Sex", "s"."Status", "s"."UpdateId", "s"."UpdateName", "s"."UpdateTime", "s"."UserType", "s"."WeChat"
+FROM "SysUser" AS "s"
+WHERE "s"."IsDrop" = 0
+LIMIT @__p_1 OFFSET @__p_0
+2022-11-05 12:29:13.656 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.Common.PageModel`1[[Dragon.Core.ViewModel.UserViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Dragon.Core.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:29:13.666 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.UserController.GetUserPageListAsync (Dragon.Core.WebApi) in 64.753ms
+2022-11-05 12:29:13.668 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.UserController.GetUserPageListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:13.669 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/sysuser/pagelist?page=1&pageSize=10 - - - 200 937 application/json;+charset=utf-8 76.6017ms
+2022-11-05 12:29:23.211 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/getapilist - -
+2022-11-05 12:29:23.219 +08:00 [INF] {"Ip":"::ffff:127.0.0.1","Url":"/getapilist","Datetime":"2022-11-05 12:29:23","Date":"2022-11-05","Week":"周六"}
+2022-11-05 12:29:23.221 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.ApiModuleController.GetApiList (Dragon.Core.WebApi)'
+2022-11-05 12:29:23.227 +08:00 [INF] Route matched with {action = "GetApiList", controller = "ApiModule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.ApiModuleViewModel]]] GetApiList(System.String, Int32) on controller Dragon.Core.WebApi.Controllers.ApiModuleController (Dragon.Core.WebApi).
+2022-11-05 12:29:23.233 +08:00 [INF] Entity Framework Core 6.0.10 initialized 'EfDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.9' with options: MigrationsAssembly=DragonSea.Core.Data 
+2022-11-05 12:29:23.239 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ApiName", "a"."ApiUrl", "a"."CreatedId", "a"."CreatedName", "a"."CreatedTime", "a"."IsDrop", "a"."Order", "a"."Remark", "a"."Status", "a"."UpdateId", "a"."UpdateName", "a"."UpdateTime"
+FROM "ApiModule" AS "a"
+WHERE "a"."IsDrop" = 0
+2022-11-05 12:29:23.262 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.ApiModuleViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:29:23.269 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.ApiModuleController.GetApiList (Dragon.Core.WebApi) in 39.5352ms
+2022-11-05 12:29:23.271 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.ApiModuleController.GetApiList (Dragon.Core.WebApi)'
+2022-11-05 12:29:23.287 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/getapilist - - - 200 5020 application/json;+charset=utf-8 76.6895ms
+2022-11-05 12:29:26.563 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/sysMenu/list - -
+2022-11-05 12:29:26.566 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.MenuListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:26.570 +08:00 [INF] Route matched with {action = "MenuList", controller = "SysMenu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.MenuListItem]]] MenuListAsync(Dragon.Core.ViewModel.MenuParams) on controller Dragon.Core.WebApi.Controllers.SysMenuController (Dragon.Core.WebApi).
+2022-11-05 12:29:26.596 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.MenuListItem, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:29:26.607 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.SysMenuController.MenuListAsync (Dragon.Core.WebApi) in 33.7577ms
+2022-11-05 12:29:26.609 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.SysMenuController.MenuListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:26.610 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/sysMenu/list - - - 200 13241 application/json;+charset=utf-8 47.1617ms
+2022-11-05 12:29:30.286 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/dept/list - -
+2022-11-05 12:29:30.289 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi)'
+2022-11-05 12:29:30.291 +08:00 [INF] Route matched with {action = "GetDeptList", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.DepartmentViewModel]]] GetDeptList(Dragon.Core.ViewModel.DepartmentParams) on controller Dragon.Core.WebApi.Controllers.DepartmentController (Dragon.Core.WebApi).
+2022-11-05 12:29:30.295 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.DepartmentViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:29:30.296 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi) in 2.571ms
+2022-11-05 12:29:30.298 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi)'
+2022-11-05 12:29:30.299 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/dept/list - - - 200 469 application/json;+charset=utf-8 12.4177ms
+2022-11-05 12:29:32.515 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/sysrole/pagerolelist?page=1&pageSize=10 - -
+2022-11-05 12:29:32.517 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.RoleController.GetPageRoleListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:32.521 +08:00 [INF] Route matched with {action = "GetPageRoleList", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.Common.PageModel`1[Dragon.Core.Entity.SysRole]]] GetPageRoleListAsync(Dragon.Core.ViewModel.RolePageInput) on controller Dragon.Core.WebApi.Controllers.RoleController (Dragon.Core.WebApi).
+2022-11-05 12:29:32.541 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.Common.PageModel`1[[Dragon.Core.Entity.SysRole, Dragon.Core.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Dragon.Core.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:29:32.551 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.RoleController.GetPageRoleListAsync (Dragon.Core.WebApi) in 26.5152ms
+2022-11-05 12:29:32.553 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.RoleController.GetPageRoleListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:32.555 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/sysrole/pagerolelist?page=1&pageSize=10 - - - 200 1131 application/json;+charset=utf-8 39.6841ms
+2022-11-05 12:29:34.766 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/dept/list - -
+2022-11-05 12:29:34.768 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi)'
+2022-11-05 12:29:34.769 +08:00 [INF] Route matched with {action = "GetDeptList", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[System.Collections.Generic.List`1[Dragon.Core.ViewModel.DepartmentViewModel]]] GetDeptList(Dragon.Core.ViewModel.DepartmentParams) on controller Dragon.Core.WebApi.Controllers.DepartmentController (Dragon.Core.WebApi).
+2022-11-05 12:29:34.773 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[System.Collections.Generic.List`1[[Dragon.Core.ViewModel.DepartmentViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-05 12:29:34.774 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi) in 2.7291ms
+2022-11-05 12:29:34.776 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.DepartmentController.GetDeptList (Dragon.Core.WebApi)'
+2022-11-05 12:29:34.777 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/dept/list - - - 200 469 application/json;+charset=utf-8 11.6412ms
+2022-11-05 12:29:34.797 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5135/sysuser/pagelist?page=1&pageSize=10 - -
+2022-11-05 12:29:34.800 +08:00 [INF] Executing endpoint 'Dragon.Core.WebApi.Controllers.UserController.GetUserPageListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:34.801 +08:00 [INF] Route matched with {action = "GetUserPageList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Dragon.Core.ViewModel.MessageModel`1[Dragon.Core.Common.PageModel`1[Dragon.Core.ViewModel.UserViewModel]]] GetUserPageListAsync(Dragon.Core.ViewModel.UserPageInput) on controller Dragon.Core.WebApi.Controllers.UserController (Dragon.Core.WebApi).
+2022-11-05 12:29:34.805 +08:00 [INF] Executing ObjectResult, writing value of type 'Dragon.Core.ViewModel.MessageModel`1[[Dragon.Core.Common.PageModel`1[[Dragon.Core.ViewModel.UserViewModel, Dragon.Core.ViewModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Dragon.Core.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-11-05 12:29:34.806 +08:00 [INF] Executed action Dragon.Core.WebApi.Controllers.UserController.GetUserPageListAsync (Dragon.Core.WebApi) in 2.657ms
+2022-11-05 12:29:34.808 +08:00 [INF] Executed endpoint 'Dragon.Core.WebApi.Controllers.UserController.GetUserPageListAsync (Dragon.Core.WebApi)'
+2022-11-05 12:29:34.809 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5135/sysuser/pagelist?page=1&pageSize=10 - - - 200 937 application/json;+charset=utf-8 12.0105ms
