@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Dragon.Core.WebApi.props" />
+</Project>
