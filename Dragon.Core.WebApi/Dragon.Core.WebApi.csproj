@@ -35,4 +35,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\上传文件\" />
+  </ItemGroup>
+
 </Project>

@@ -111,6 +111,7 @@ namespace Dragon.Core.WebApi
                     options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
                 });
                 builder.Services.AddCustomModelStateSetup();
+                builder.Services.AddMaxBodyLengthLimitSetup();
                 builder.Services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());//使控制器可以采用属性注入
                 //支持编码大全 例如:支持 System.Text.Encoding.GetEncoding("GB2312")  System.Text.Encoding.GetEncoding("GB18030") 
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);

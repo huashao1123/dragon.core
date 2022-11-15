@@ -1248,6 +1248,9 @@
       "Dragon.Core.ViewModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
         "compile": {
           "bin/placeholder/Dragon.Core.ViewModel.dll": {}
         },

@@ -21,7 +21,7 @@ namespace Dragon.Core.Entity
         /// 两个文件的大小和散列值（SHA256）都相同的概率非常小。因此只要大小和SHA256相同，就认为是相同的文件。
         /// SHA256的碰撞的概率比MD5低很多。
         /// </summary>
-        public string FileSHA256Hash { get;  set; }
+        public string? FileSHA256Hash { get;  set; }
 
         /// <summary>
         /// 存储路径
@@ -32,8 +32,21 @@ namespace Dragon.Core.Entity
         /// </summary>
         public string Suffix { get; set; }
         /// <summary>
-        /// 文件大小KB
+        /// 文件版本
         /// </summary>
-        public string SizeKb { get; set; }
+        public string FileVersion { get; set; }
+        /// <summary>
+        /// 文件所属部门
+        /// </summary>
+        public string FileOwnDept { get; set;}
+
+        /// <summary>
+        /// 文件类型
+        /// </summary>
+        public string FileType { get; set; }
+        /// <summary>
+        /// 文件等级
+        /// </summary>
+        public string Filelevel { get; set; }
     }
 }

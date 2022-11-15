@@ -1,7 +1,9 @@
 ﻿using Dragon.Core.ViewModel;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -47,6 +49,24 @@ namespace Dragon.Core.Extensions.ServiceExtensions
                     // 设置结果
                     return new BadRequestObjectResult(result);
                 };
+            });
+        }
+        /// <summary>
+        /// 设置请求体最大文件限制
+        /// </summary>
+        /// <param name="services"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static void AddMaxBodyLengthLimitSetup(this IServiceCollection services)
+        {
+            if (services == null) { throw new ArgumentNullException(nameof(services)); }
+            services.Configure<FormOptions>(x =>
+            {
+                x.MultipartBodyLengthLimit = 1024 * 1024 * 1024;
+                x.ValueLengthLimit = int.MaxValue;
+            });
+            services.Configure<KestrelServerOptions>(options =>
+            {
+                options.Limits.MaxRequestBodySize = 1024 * 1024 * 1024;
             });
         }
     }
