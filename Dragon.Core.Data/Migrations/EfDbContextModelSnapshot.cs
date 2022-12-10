@@ -15,7 +15,7 @@ namespace Dragon.Core.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
+            modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
 
             modelBuilder.Entity("Dragon.Core.Entity.ApiModule", b =>
                 {
@@ -121,6 +121,81 @@ namespace Dragon.Core.Data.Migrations
                     b.HasIndex("Name");
 
                     b.ToTable("SysDepartMent");
+                });
+
+            modelBuilder.Entity("Dragon.Core.Entity.SysFileItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CreatedId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CreatedName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DeptId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FileLevel")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileOwnDept")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileSHA256Hash")
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("FileSizeInBytes")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FileType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileVersion")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool?>("IsDrop")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Suffix")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("UpdateId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UpdateName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SysFileItem");
                 });
 
             modelBuilder.Entity("Dragon.Core.Entity.SysMenu", b =>

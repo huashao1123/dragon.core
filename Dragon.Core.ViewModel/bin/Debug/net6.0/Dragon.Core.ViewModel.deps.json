@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Dragon.Core.ViewModel/1.0.0": {
         "dependencies": {
+          "Dragon.Core.Enum": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "2.2.0"
         },
         "runtime": {
@@ -38,7 +39,12 @@
         }
       },
       "System.Memory/4.5.1": {},
-      "System.Runtime.CompilerServices.Unsafe/4.5.1": {}
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {},
+      "Dragon.Core.Enum/1.0.0": {
+        "runtime": {
+          "Dragon.Core.Enum.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -74,6 +80,11 @@
       "sha512": "sha512-Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    },
+    "Dragon.Core.Enum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

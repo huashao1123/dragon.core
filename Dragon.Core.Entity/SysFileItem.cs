@@ -38,15 +38,18 @@ namespace Dragon.Core.Entity
         /// <summary>
         /// 文件所属部门
         /// </summary>
-        public string FileOwnDept { get; set;}
+        public string? FileOwnDept { get; set;}
+
+
+        public int DeptId { get; set; }
 
         /// <summary>
         /// 文件类型
         /// </summary>
-        public string FileType { get; set; }
+        public string? FileType { get; set; }
         /// <summary>
         /// 文件等级
         /// </summary>
-        public string Filelevel { get; set; }
+        public FileLevelEnum FileLevel { get; set; }
     }
 }

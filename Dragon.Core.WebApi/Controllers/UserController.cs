@@ -53,8 +53,8 @@ namespace Dragon.Core.WebApi.Controllers
         }
         [Authorize(Permissions.Name)]
         [Transaction]
-        [HttpDelete("/sysuser/delete/{id}")]
-        public async Task<MessageModel<bool>>DeleteSysUserAsync(int id)
+        [HttpDelete("/sysuser/delete")]
+        public async Task<MessageModel<bool>>DeleteSysUserAsync([FromBody] int id)
         {
             if (id==Convert.ToInt32(_user.ID))
             {

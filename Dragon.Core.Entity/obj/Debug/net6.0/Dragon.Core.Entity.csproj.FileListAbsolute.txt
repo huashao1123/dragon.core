@@ -24,3 +24,6 @@ C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\obj\Debug
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\obj\Debug\net6.0\refint\Dragon.Core.Entity.dll
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\obj\Debug\net6.0\Dragon.Core.Entity.pdb
 C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\obj\Debug\net6.0\ref\Dragon.Core.Entity.dll
+C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\bin\Debug\net6.0\Dragon.Core.Enum.dll
+C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\bin\Debug\net6.0\Dragon.Core.Enum.pdb
+C:\Users\longhaihua\Desktop\Dragon.Core\dragon.core\Dragon.Core.Entity\obj\Debug\net6.0\Dragon.Core.Entity.csproj.CopyComplete

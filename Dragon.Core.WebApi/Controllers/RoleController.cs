@@ -62,7 +62,7 @@ namespace Dragon.Core.WebApi.Controllers
         }
         [Transaction]
         [HttpDelete("/sysrole/delete")]
-        public async Task<MessageModel<bool>> DeleteRoleAsync([FromRoute]int id)
+        public async Task<MessageModel<bool>> DeleteRoleAsync([FromBody] int id)
         {
             var data = new MessageModel<bool>();
             data.result = false;

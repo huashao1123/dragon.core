@@ -12,6 +12,9 @@ namespace Dragon.Core.ViewModel
         public int id { get; set; }
         public string fileVersion { get; set; }
 
+        public int fileLevel { get; set; }
+
         public List<IFormFile>? File { get; set; }
     }
+
 }

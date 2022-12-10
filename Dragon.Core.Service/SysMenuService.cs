@@ -127,6 +127,8 @@ namespace Dragon.Core.Service
             }
             var sysMenu = _mapper.Map<SysMenu>(menuInput);
             sysMenu.UpdateTime=DateTime.Now;
+            sysMenu.Name ??= "";
+            sysMenu.path ??= "";
             await UpdateAsync(sysMenu);
             return true;
         }

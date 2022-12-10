@@ -17,6 +17,26 @@
       "PackagePath": "staticwebassets\\Data\\userrole.tsv"
     },
     {
+      "Id": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Upload\\EN-28 热转印箔物料编码规则A0版-20220818.pdf",
+      "PackagePath": "staticwebassets\\Upload\\EN-28 热转印箔物料编码规则A0版-20220818.pdf"
+    },
+    {
+      "Id": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Upload\\scope.txt",
+      "PackagePath": "staticwebassets\\Upload\\scope.txt"
+    },
+    {
+      "Id": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Upload\\vben admin开发项目流程.docx",
+      "PackagePath": "staticwebassets\\Upload\\vben admin开发项目流程.docx"
+    },
+    {
+      "Id": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Upload\\图像处理总结.docx",
+      "PackagePath": "staticwebassets\\Upload\\图像处理总结.docx"
+    },
+    {
+      "Id": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\wwwroot\\Upload\\电动车发票.pdf",
+      "PackagePath": "staticwebassets\\Upload\\电动车发票.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Dragon.Core.WebApi.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

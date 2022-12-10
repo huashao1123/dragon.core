@@ -85,106 +85,6 @@
             备注
             </summary>
         </member>
-        <member name="T:Dragon.Core.Entity.DataScopeEnum">
-            <summary>
-            角色数据范围枚举
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.DataScopeEnum.All">
-            <summary>
-            全部数据
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.DataScopeEnum.Dept_with_child">
-            <summary>
-            本部门及以下数据
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.DataScopeEnum.Dept">
-            <summary>
-            本部门数据
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.DataScopeEnum.Self">
-            <summary>
-            仅本人数据
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.DataScopeEnum.Define">
-            <summary>
-            自定义数据
-            </summary>
-        </member>
-        <member name="T:Dragon.Core.Entity.Enum.JobStatusEnum">
-            <summary>
-            岗位状态枚举
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.JobStatusEnum.On">
-            <summary>
-            在职
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.JobStatusEnum.Off">
-            <summary>
-            离职
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.JobStatusEnum.Leave">
-            <summary>
-            请假
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Normal">
-            <summary>
-            启用
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.StateEnum.Frozen">
-            <summary>
-            禁用
-            </summary>
-        </member>
-        <member name="T:Dragon.Core.Entity.Enum.UserTypeEnum">
-            <summary>
-            账号类型枚举
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.UserTypeEnum.Admin">
-            <summary>
-            管理员
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.UserTypeEnum.None">
-            <summary>
-            普通账号
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.Enum.UserTypeEnum.SuperAdmin">
-            <summary>
-            超级管理员
-            </summary>
-        </member>
-        <member name="T:Dragon.Core.Entity.MenuTypeEnum">
-            <summary>
-            系统菜单类型枚举
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.MenuTypeEnum.Dir">
-            <summary>
-            目录
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.MenuTypeEnum.Menu">
-            <summary>
-            菜单
-            </summary>
-        </member>
-        <member name="F:Dragon.Core.Entity.MenuTypeEnum.Btn">
-            <summary>
-            按钮
-            </summary>
-        </member>
         <member name="P:Dragon.Core.Entity.SysDepartMent.Name">
             <summary>
             部门名称
@@ -230,9 +130,24 @@
             文件后缀
             </summary>
         </member>
-        <member name="P:Dragon.Core.Entity.SysFileItem.SizeKb">
+        <member name="P:Dragon.Core.Entity.SysFileItem.FileVersion">
             <summary>
-            文件大小KB
+            文件版本
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysFileItem.FileOwnDept">
+            <summary>
+            文件所属部门
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysFileItem.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.SysFileItem.FileLevel">
+            <summary>
+            文件等级
             </summary>
         </member>
         <member name="T:Dragon.Core.Entity.SysMenu">

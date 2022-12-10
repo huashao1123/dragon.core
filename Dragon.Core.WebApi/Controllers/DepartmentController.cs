@@ -75,8 +75,8 @@ namespace Dragon.Core.WebApi.Controllers
             messageModel.result = success;
             return messageModel;
         }
-        [HttpDelete("/dept/delete/{id}")]
-        public async Task<MessageModel<bool>>DeleteDept(int id)
+        [HttpDelete("/dept/delete")]
+        public async Task<MessageModel<bool>>DeleteDept([FromBody] int id)
         {
             if (!_user.IsSuperAdmin)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Query;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -22,7 +23,35 @@ namespace Dragon.Core.Common.Helper
             return Expression.Lambda<Func<T, bool>>(Expression.AndAlso(left, right), parameter);
         }
 
-        
+        public static Expression<Func<SetPropertyCalls<T>, SetPropertyCalls<T>>> WhereLambda<T, T1>(T1 dto)
+        {
+            var d = Expression.Parameter(typeof(SetPropertyCalls<T>), "d");
+            var f = Expression.Parameter(typeof(T), "e");
+            var methods = typeof(SetPropertyCalls<T>).GetMethods().FirstOrDefault(d => d.Name == "SetProperty" && d.GetParameters()[1].ParameterType.Name == "TProperty");
+            var dtoProps = typeof(T1).GetProperties();
+            var props = typeof(T).GetProperties().Select(d => new {d.Name,d.PropertyType}).ToList();
+            //var ds = d;
+            Expression expression = d;
+            foreach (var dtoProp in dtoProps)
+            {
+                var value = dtoProp.GetValue(dto);
+                string name = dtoProp.Name;
+                var prop= props.Where(d => d.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                if (prop == null || value == null)
+                {
+                    continue;
+                }
+                Type t = prop.PropertyType;
+                var nameProp = Expression.Property(f, prop.Name); //e.Name
+                var nameLambda = Expression.Lambda(nameProp, f);// e => e.Name
+                var constant = Expression.Constant(value,t);//value
+                var method = methods.MakeGenericMethod(t);
+                expression = Expression.Call(expression, method, nameLambda, constant);
+            }
+            return Expression.Lambda<Func<SetPropertyCalls<T>, SetPropertyCalls<T>>>(expression, d);
+        }
+
+
     }
     class ReplaceExpressionVisitor : ExpressionVisitor
     {

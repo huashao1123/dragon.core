@@ -56,6 +56,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Dragon.Core.Enum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dragon.Core.Enum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dragon.Core.Enum.dll": {}
+        }
       }
     }
   },
@@ -135,10 +145,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Dragon.Core.Enum/1.0.0": {
+      "type": "project",
+      "path": "../Dragon.Core.Enum/Dragon.Core.Enum.csproj",
+      "msbuildProject": "../Dragon.Core.Enum/Dragon.Core.Enum.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Dragon.Core.Enum >= 1.0.0",
       "Microsoft.AspNetCore.Http.Features >= 2.2.0"
     ]
   },
@@ -173,7 +189,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Enum\\Dragon.Core.Enum.csproj": {
+              "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Enum\\Dragon.Core.Enum.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

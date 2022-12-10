@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using Dragon.Core.Common;
+using Dragon.Core.Common.Helper;
 
 namespace Dragon.Core.Repository
 {
@@ -46,6 +47,12 @@ namespace Dragon.Core.Repository
                 await SaveAsync(cancellationToken);
             }
         }
+
+        public async Task<int> ExecuteDeleteAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
+        {
+           return await _dbSet.Where(predicate).ExecuteDeleteAsync(cancellationToken);
+        }
+
 
         public async Task DeleteAsync(Expression<Func<TEntity, bool>> predicate, bool autoSave = false, CancellationToken cancellationToken = default)
         {
@@ -184,6 +191,10 @@ namespace Dragon.Core.Repository
             return updateCount;
         }
 
+        public async Task<int> UpdateNotQueryAsync<T1>(Expression<Func<TEntity, bool>> whereLambda,T1 Dto,CancellationToken cancellationToken = default)
+        {
+          return await  _dbSet.Where(whereLambda).ExecuteUpdateAsync(ExpressionHelper.WhereLambda<TEntity, T1>(Dto), cancellationToken);
+        }
 
 
         public async Task UpdateManyAsync(IEnumerable<TEntity> entities, bool autoSave = false, CancellationToken cancellationToken = default)

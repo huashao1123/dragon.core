@@ -101,9 +101,9 @@ namespace Dragon.Core.WebApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpDelete("/sysMenu/delete/{id}")]
+        [HttpDelete("/sysMenu/delete")]
         [Authorize(Permissions.Name)]
-        public async Task<MessageModel<bool>> DeleteMenuAsync(int id)
+        public async Task<MessageModel<bool>> DeleteMenuAsync([FromBody] int id)
         {
             var data = new MessageModel<bool>();
             data.result = false;

@@ -16,4 +16,8 @@
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dragon.Core.Enum\Dragon.Core.Enum.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -146,6 +146,16 @@ namespace Dragon.Core.IRepository
         Task<int> UpdateNotQueryAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToken = default, bool isIgnoreCol = false, params Expression<Func<TEntity, object>>[] properties);
 
         /// <summary>
+        /// 利用dto更新数据
+        /// </summary>
+        /// <typeparam name="T1"></typeparam>
+        /// <param name="whereLambda"></param>
+        /// <param name="Dto"></param>
+        /// <returns></returns>
+        Task<int> UpdateNotQueryAsync<T1>(Expression<Func<TEntity, bool>> whereLambda, T1 Dto, CancellationToken cancellationToken = default);
+
+
+        /// <summary>
         /// Gets a table
         /// </summary>
         IQueryable<TEntity> Table { get; }
@@ -156,5 +166,7 @@ namespace Dragon.Core.IRepository
         IQueryable<TEntity> TableNoTracking { get; }
 
         Task<int> SaveAsync(CancellationToken cancellationToken = default);
+
+        Task<int> ExecuteDeleteAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
     }
 }

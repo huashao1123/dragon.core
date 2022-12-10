@@ -33,6 +33,7 @@ namespace Dragon.Core.Extensions
             CreateMap<RoleInput,SysRole>();
             CreateMap<SysUser, UserViewModel>();
             CreateMap<UserInput, SysUser>();
+            CreateMap<SysFileItem, FileOutput>();
         }
     }
 }

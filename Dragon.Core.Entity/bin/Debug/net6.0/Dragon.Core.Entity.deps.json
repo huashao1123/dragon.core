@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Dragon.Core.Entity/1.0.0": {
+        "dependencies": {
+          "Dragon.Core.Enum": "1.0.0"
+        },
         "runtime": {
           "Dragon.Core.Entity.dll": {}
+        }
+      },
+      "Dragon.Core.Enum/1.0.0": {
+        "runtime": {
+          "Dragon.Core.Enum.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Dragon.Core.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dragon.Core.Enum/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

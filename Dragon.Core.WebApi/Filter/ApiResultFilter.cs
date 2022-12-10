@@ -55,10 +55,10 @@ namespace Dragon.Core.WebApi.Filter
                 {
                     //context.Result = new ObjectResult();
                 }
-                else if (context.Result is Exception)
-                {
-
-                }
+                //else if (context.Result is FileStreamResult)
+                //{
+                //    context.Result = new ObjectResult(new MessageModel { result = context.Result});
+                //}
                 else if (context.Result is MessageModel message)
                 {
                     return;
