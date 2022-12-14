@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "21F5xOAbQRnsZjPHNlRuv/Sj7hCEckDSEBSWu0z+F4YKiM5rCjCT0Gncf2jsfxUkW61TKkaR1YRBkXJc18B0mQ==",
+  "dgSpecHash": "Dgq7mSrbXB7ASXN9eQWdVD/K43RovH5N33yKphsDd7qfKIOVYZ2JvrbBJCeVUKPh6pBhcBDS+d0fCFg3ph6y4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.WebApi\\Dragon.Core.WebApi.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,9 @@
     "E:\\nugetClient\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "E:\\nugetClient\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "E:\\nugetClient\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "E:\\nugetClient\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.9\\microsoft.aspnetcore.authorization.6.0.9.nupkg.sha512",

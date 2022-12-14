@@ -91,6 +91,24 @@
             <param name="roleDeptInput"></param>
             <returns></returns>
         </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ServerMonitorController.GetServerBaseInfo">
+            <summary>
+            服务器基本配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ServerMonitorController.GetServerUseInfo">
+            <summary>
+            服务器使用资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dragon.Core.WebApi.Controllers.ServerMonitorController.GetServerNetWorkInfo">
+            <summary>
+            服务器网络信息
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Dragon.Core.WebApi.Controllers.SysMenuController.GetPermCode">
             <summary>
             获取按钮权限(登录)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NpjeS7RJQ/0v5I6N6BreB9AmrxwwDfvnctij69uWAlGLED6a82iBP/cNCo/6fp1vupqa+XKyWOulKDgyCx5opg==",
+  "dgSpecHash": "XahOYaSxlulr3NzCdBrcykDYrPDBdwvPIJ/ypMMd1j4K3RanitrZcxGyxZlGdKPscq/8Vdud02szu3YuuaurZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.Extensions\\Dragon.Core.Extensions.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "E:\\nugetClient\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "E:\\nugetClient\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
     "E:\\nugetClient\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.9\\microsoft.aspnetcore.authorization.6.0.9.nupkg.sha512",

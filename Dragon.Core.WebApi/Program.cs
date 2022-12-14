@@ -16,6 +16,9 @@ using Newtonsoft.Json.Serialization;
 using Serilog;
 using Serilog.Events;
 using System.Text;
+using FluentValidation.AspNetCore;
+using Autofac.Core;
+using FluentValidation;
 
 namespace Dragon.Core.WebApi
 {
@@ -114,6 +117,14 @@ namespace Dragon.Core.WebApi
                 builder.Services.AddMaxBodyLengthLimitSetup();
                 builder.Services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());//使控制器可以采用属性注入
                 //支持编码大全 例如:支持 System.Text.Encoding.GetEncoding("GB2312")  System.Text.Encoding.GetEncoding("GB18030") 
+                builder.Services.AddFluentValidationAutoValidation(config =>
+                {
+                    //config.AddValidatorsFromAssemblyContaining(typeof(FileFormValidator));
+                    //是否与MvcValidation共存
+                    config.DisableDataAnnotationsValidation = true;
+                });
+                //程序集方式添加验证
+                builder.Services.AddValidatorsFromAssemblyContaining<FileFormValidator>();
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
                 
                 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

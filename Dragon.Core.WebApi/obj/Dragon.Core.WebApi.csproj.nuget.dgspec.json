@@ -378,6 +378,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -616,6 +620,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[6.0.9, )"

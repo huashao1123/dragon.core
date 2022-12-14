@@ -378,6 +378,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
