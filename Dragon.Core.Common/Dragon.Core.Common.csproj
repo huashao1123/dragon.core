@@ -17,4 +17,7 @@
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.22.1" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Dragon.Core.ViewModel\Dragon.Core.ViewModel.csproj" />
+	</ItemGroup>
 </Project>

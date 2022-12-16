@@ -555,6 +555,30 @@
             "related": ".xml"
           }
         }
+      },
+      "Dragon.Core.Enum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dragon.Core.Enum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dragon.Core.Enum.dll": {}
+        }
+      },
+      "Dragon.Core.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Dragon.Core.Enum": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Dragon.Core.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dragon.Core.ViewModel.dll": {}
+        }
       }
     }
   },
@@ -1414,10 +1438,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Dragon.Core.Enum/1.0.0": {
+      "type": "project",
+      "path": "../Dragon.Core.Enum/Dragon.Core.Enum.csproj",
+      "msbuildProject": "../Dragon.Core.Enum/Dragon.Core.Enum.csproj"
+    },
+    "Dragon.Core.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../Dragon.Core.ViewModel/Dragon.Core.ViewModel.csproj",
+      "msbuildProject": "../Dragon.Core.ViewModel/Dragon.Core.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Dragon.Core.ViewModel >= 1.0.0",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Relational >= 7.0.0",
@@ -1461,7 +1496,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.ViewModel\\Dragon.Core.ViewModel.csproj": {
+              "projectPath": "C:\\Users\\longhaihua\\Desktop\\Dragon.Core\\dragon.core\\Dragon.Core.ViewModel\\Dragon.Core.ViewModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1531,7 +1570,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

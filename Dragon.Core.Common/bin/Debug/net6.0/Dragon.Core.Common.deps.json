@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Dragon.Core.Common/1.0.0": {
         "dependencies": {
+          "Dragon.Core.ViewModel": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
@@ -339,7 +340,21 @@
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.Cryptography.Cng/4.5.0": {},
-      "System.Text.Encodings.Web/4.5.0": {}
+      "System.Text.Encodings.Web/4.5.0": {},
+      "Dragon.Core.Enum/1.0.0": {
+        "runtime": {
+          "Dragon.Core.Enum.dll": {}
+        }
+      },
+      "Dragon.Core.ViewModel/1.0.0": {
+        "dependencies": {
+          "Dragon.Core.Enum": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "runtime": {
+          "Dragon.Core.ViewModel.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -585,6 +600,16 @@
       "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
+    "Dragon.Core.Enum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dragon.Core.ViewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

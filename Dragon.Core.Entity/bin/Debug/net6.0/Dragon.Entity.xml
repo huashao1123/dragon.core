@@ -390,5 +390,275 @@
             角色Id
             </summary>
         </member>
+        <member name="P:Dragon.Core.Entity.WeChatCompany.CompanyID">
+            <summary>
+            公司ID
+            </summary> 
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatCompany.CompanyName">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatCompany.CompanyIP">
+            <summary>
+            公司IP
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatCompany.CompanyRemark">
+            <summary>
+            公司备注
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatCompany.CompanyAPI">
+            <summary>
+            api地址
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatCompany.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.publicAccount">
+            <summary>
+            微信公众号唯一标识
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.publicNick">
+            <summary>
+            微信公众号名称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.weChatAccount">
+            <summary>
+            微信账号
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.weChatNick">
+            <summary>
+            微信名称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.appid">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.appsecret">
+            <summary>
+            应用秘钥
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.token">
+            <summary>
+            公众号推送token
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.interactiveToken">
+            <summary>
+            验证秘钥(验证消息是否真实)
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.tokenExpiration">
+            <summary>
+            微信公众号token过期时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatConfig.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogFrom">
+            <summary>
+            来自谁
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogIP">
+            <summary>
+            推送IP
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogCompanyID">
+            <summary>
+            推送客户
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogToUserID">
+            <summary>
+            推送用户
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogTemplateID">
+            <summary>
+            推送模板ID
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogContent">
+            <summary>
+            推送内容
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogTime">
+            <summary>
+            推送时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogStatus">
+            <summary>
+            推送状态(Y/N)
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogRemark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogOpenid">
+            <summary>
+            推送OpenID
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatPushLog.PushLogPublicAccount">
+            <summary>
+            推送微信公众号
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRticket">
+            <summary>
+            主键id,ticket
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRbindCompanyID">
+            <summary>
+            需要绑定的公司
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRbindJobID">
+            <summary>
+            需要绑定的员工id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRbindJobNick">
+            <summary>
+            需要绑定的员工昵称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRcrateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRpublicAccount">
+            <summary>
+            关联的公众号
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRisUsed">
+            <summary>
+            是否已使用
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRuseTime">
+            <summary>
+            使用时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatQR.QRuseOpenid">
+            <summary>
+            关联的微信用户id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.CompanyID">
+            <summary>
+            绑定公司id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.SubJobID">
+            <summary>
+            绑定员工id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.SubUserOpenID">
+            <summary>
+            绑定微信id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.SubUserUnionID">
+            <summary>
+            绑定微信联合id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.SubUserRegTime">
+            <summary>
+            绑定时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.SubUserRefTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.SubUserRemark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.IsUnBind">
+            <summary>
+            是否已解绑
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatSub.LastSubUserOpenID">
+            <summary>
+            上次绑定微信id
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileID">
+            <summary>
+            文件ID
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileContentType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileExtension">
+            <summary>
+            文件拓展名
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFilePosition">
+            <summary>
+            文件位置
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileTime">
+            <summary>
+            文件上传时间
+            </summary>
+        </member>
+        <member name="P:Dragon.Core.Entity.WeChatUploadFile.UploadFileRemark">
+            <summary>
+            文件备注
+            </summary>
+        </member>
     </members>
 </doc>

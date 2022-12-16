@@ -1509,6 +1509,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Dragon.Core.ViewModel": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
@@ -1548,6 +1549,20 @@
         },
         "runtime": {
           "bin/placeholder/Dragon.Core.Enum.dll": {}
+        }
+      },
+      "Dragon.Core.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Dragon.Core.Enum": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Dragon.Core.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dragon.Core.ViewModel.dll": {}
         }
       }
     }
@@ -4212,6 +4227,11 @@
       "type": "project",
       "path": "../Dragon.Core.Enum/Dragon.Core.Enum.csproj",
       "msbuildProject": "../Dragon.Core.Enum/Dragon.Core.Enum.csproj"
+    },
+    "Dragon.Core.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../Dragon.Core.ViewModel/Dragon.Core.ViewModel.csproj",
+      "msbuildProject": "../Dragon.Core.ViewModel/Dragon.Core.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4305,7 +4325,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

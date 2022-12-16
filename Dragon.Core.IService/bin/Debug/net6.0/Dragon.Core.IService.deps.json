@@ -335,6 +335,7 @@
       "System.Text.Encodings.Web/4.5.0": {},
       "Dragon.Core.Common/1.0.0": {
         "dependencies": {
+          "Dragon.Core.ViewModel": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
